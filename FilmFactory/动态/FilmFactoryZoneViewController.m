@@ -19,6 +19,9 @@
     [super viewDidLoad];
     self.gk_navTitle = @"动态";
     [self.view addSubview:self.FilmFactoryTableView];
+    UIView * lkHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 10)];
+    lkHeader.backgroundColor = [UIColor clearColor];
+    _FilmFactoryTableView.tableHeaderView =  lkHeader;
     // Do any additional setup after loading the view
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -32,7 +35,6 @@
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     FilmFactorySectionHeader * sectionHeader = [FilmFactorySectionHeader new];
-    sectionHeader.backgroundColor = [UIColor whiteColor];
     return sectionHeader;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
