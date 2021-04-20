@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF7EF262EAF73001618BD /* AppDelegate.m */; };
-		8A3EF7F3262EAF73001618BD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF7F2262EAF73001618BD /* SceneDelegate.m */; };
 		8A3EF7F6262EAF73001618BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF7F5262EAF73001618BD /* ViewController.m */; };
 		8A3EF7F9262EAF73001618BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EF7F7262EAF73001618BD /* Main.storyboard */; };
 		8A3EF7FB262EAF75001618BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EF7FA262EAF75001618BD /* Assets.xcassets */; };
@@ -16,6 +15,22 @@
 		8A3EF801262EAF75001618BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF800262EAF75001618BD /* main.m */; };
 		8A3EF80B262EAF75001618BD /* FilmFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF80A262EAF75001618BD /* FilmFactoryTests.m */; };
 		8A3EF816262EAF75001618BD /* FilmFactoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF815262EAF75001618BD /* FilmFactoryUITests.m */; };
+		8A3EF863262EB321001618BD /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF857262EB321001618BD /* UIView+frame.m */; };
+		8A3EF864262EB321001618BD /* UIColor+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF858262EB321001618BD /* UIColor+CHRegex.m */; };
+		8A3EF865262EB321001618BD /* UILabel+CDGPSpaceLb.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF859262EB321001618BD /* UILabel+CDGPSpaceLb.m */; };
+		8A3EF866262EB321001618BD /* UIViewController+IOS13.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF85A262EB321001618BD /* UIViewController+IOS13.m */; };
+		8A3EF867262EB321001618BD /* NSString+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF85C262EB321001618BD /* NSString+CHRegex.m */; };
+		8A3EF868262EB321001618BD /* UIButton+CHRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF861262EB321001618BD /* UIButton+CHRegex.m */; };
+		8A3EF869262EB321001618BD /* UITextField+AddPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF862262EB321001618BD /* UITextField+AddPlaceholder.m */; };
+		8A3EF86F262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF86E262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m */; };
+		8A3EF875262EB401001618BD /* FilmFactoryBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF874262EB401001618BD /* FilmFactoryBaseViewController.m */; };
+		8A3EF87B262EB43D001618BD /* FilmFactoryHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF87A262EB43D001618BD /* FilmFactoryHomeViewController.m */; };
+		8A3EF881262EB5A9001618BD /* FilmFactoryZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF880262EB5A9001618BD /* FilmFactoryZoneViewController.m */; };
+		8A3EF887262EB5BA001618BD /* FilmFactoryMsgViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF886262EB5BA001618BD /* FilmFactoryMsgViewController.m */; };
+		8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF88C262EB5C5001618BD /* FilmFactoryMineViewController.m */; };
+		8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */; };
+		8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */; };
+		DFA9BFE950DB437D2EE1B717 /* Pods_FilmFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +51,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18116D595DADAB36A75DFE60 /* Pods-FilmFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmFactory.release.xcconfig"; path = "Target Support Files/Pods-FilmFactory/Pods-FilmFactory.release.xcconfig"; sourceTree = "<group>"; };
 		8A3EF7EB262EAF73001618BD /* FilmFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3EF7EE262EAF73001618BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A3EF7EF262EAF73001618BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8A3EF7F1262EAF73001618BD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		8A3EF7F2262EAF73001618BD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		8A3EF7F4262EAF73001618BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		8A3EF7F5262EAF73001618BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8A3EF7F8262EAF73001618BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -54,6 +68,40 @@
 		8A3EF811262EAF75001618BD /* FilmFactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FilmFactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3EF815262EAF75001618BD /* FilmFactoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryUITests.m; sourceTree = "<group>"; };
 		8A3EF817262EAF75001618BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A3EF83C262EAFEB001618BD /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8A3EF840262EAFF5001618BD /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8A3EF855262EB320001618BD /* UIColor+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CHRegex.h"; sourceTree = "<group>"; };
+		8A3EF856262EB320001618BD /* UILabel+CDGPSpaceLb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CDGPSpaceLb.h"; sourceTree = "<group>"; };
+		8A3EF857262EB321001618BD /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		8A3EF858262EB321001618BD /* UIColor+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CHRegex.m"; sourceTree = "<group>"; };
+		8A3EF859262EB321001618BD /* UILabel+CDGPSpaceLb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CDGPSpaceLb.m"; sourceTree = "<group>"; };
+		8A3EF85A262EB321001618BD /* UIViewController+IOS13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+IOS13.m"; sourceTree = "<group>"; };
+		8A3EF85B262EB321001618BD /* UIButton+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CHRegex.h"; sourceTree = "<group>"; };
+		8A3EF85C262EB321001618BD /* NSString+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CHRegex.m"; sourceTree = "<group>"; };
+		8A3EF85D262EB321001618BD /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		8A3EF85E262EB321001618BD /* NSString+CHRegex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CHRegex.h"; sourceTree = "<group>"; };
+		8A3EF85F262EB321001618BD /* UITextField+AddPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+AddPlaceholder.h"; sourceTree = "<group>"; };
+		8A3EF860262EB321001618BD /* UIViewController+IOS13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+IOS13.h"; sourceTree = "<group>"; };
+		8A3EF861262EB321001618BD /* UIButton+CHRegex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CHRegex.m"; sourceTree = "<group>"; };
+		8A3EF862262EB321001618BD /* UITextField+AddPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+AddPlaceholder.m"; sourceTree = "<group>"; };
+		8A3EF86D262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryBaeTabbarViewController.h; sourceTree = "<group>"; };
+		8A3EF86E262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryBaeTabbarViewController.m; sourceTree = "<group>"; };
+		8A3EF873262EB401001618BD /* FilmFactoryBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryBaseViewController.h; sourceTree = "<group>"; };
+		8A3EF874262EB401001618BD /* FilmFactoryBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryBaseViewController.m; sourceTree = "<group>"; };
+		8A3EF879262EB43D001618BD /* FilmFactoryHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryHomeViewController.h; sourceTree = "<group>"; };
+		8A3EF87A262EB43D001618BD /* FilmFactoryHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryHomeViewController.m; sourceTree = "<group>"; };
+		8A3EF87F262EB5A9001618BD /* FilmFactoryZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryZoneViewController.h; sourceTree = "<group>"; };
+		8A3EF880262EB5A9001618BD /* FilmFactoryZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryZoneViewController.m; sourceTree = "<group>"; };
+		8A3EF885262EB5BA001618BD /* FilmFactoryMsgViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryMsgViewController.h; sourceTree = "<group>"; };
+		8A3EF886262EB5BA001618BD /* FilmFactoryMsgViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryMsgViewController.m; sourceTree = "<group>"; };
+		8A3EF88B262EB5C5001618BD /* FilmFactoryMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryMineViewController.h; sourceTree = "<group>"; };
+		8A3EF88C262EB5C5001618BD /* FilmFactoryMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryMineViewController.m; sourceTree = "<group>"; };
+		8A3EF894262EC1D4001618BD /* FilmFactoryZoneTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryZoneTableViewCell.h; sourceTree = "<group>"; };
+		8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryZoneTableViewCell.m; sourceTree = "<group>"; };
+		8A3EF89A262EC469001618BD /* FilmFactorySectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorySectionHeader.h; sourceTree = "<group>"; };
+		8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorySectionHeader.m; sourceTree = "<group>"; };
+		D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6465A50B198E61C2023CE37 /* Pods-FilmFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmFactory.debug.xcconfig"; path = "Target Support Files/Pods-FilmFactory/Pods-FilmFactory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA9BFE950DB437D2EE1B717 /* Pods_FilmFactory.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +130,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59E2734F7D14409E1BF6F232 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8A3EF7E2262EAF73001618BD = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +145,8 @@
 				8A3EF809262EAF75001618BD /* FilmFactoryTests */,
 				8A3EF814262EAF75001618BD /* FilmFactoryUITests */,
 				8A3EF7EC262EAF73001618BD /* Products */,
+				EC3D3F412E57D6E18A262728 /* Pods */,
+				59E2734F7D14409E1BF6F232 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +163,26 @@
 		8A3EF7ED262EAF73001618BD /* FilmFactory */ = {
 			isa = PBXGroup;
 			children = (
+				8A3EF854262EB2F8001618BD /* 工具 */,
+				8A3EF853262EB2DB001618BD /* 我的 */,
+				8A3EF852262EB2D8001618BD /* 消息 */,
+				8A3EF851262EB2CF001618BD /* 动态 */,
+				8A3EF850262EB2CA001618BD /* 首页 */,
 				8A3EF7EE262EAF73001618BD /* AppDelegate.h */,
 				8A3EF7EF262EAF73001618BD /* AppDelegate.m */,
-				8A3EF7F1262EAF73001618BD /* SceneDelegate.h */,
-				8A3EF7F2262EAF73001618BD /* SceneDelegate.m */,
 				8A3EF7F4262EAF73001618BD /* ViewController.h */,
 				8A3EF7F5262EAF73001618BD /* ViewController.m */,
+				8A3EF86D262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.h */,
+				8A3EF86E262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m */,
+				8A3EF873262EB401001618BD /* FilmFactoryBaseViewController.h */,
+				8A3EF874262EB401001618BD /* FilmFactoryBaseViewController.m */,
 				8A3EF7F7262EAF73001618BD /* Main.storyboard */,
 				8A3EF7FA262EAF75001618BD /* Assets.xcassets */,
 				8A3EF7FC262EAF75001618BD /* LaunchScreen.storyboard */,
 				8A3EF7FF262EAF75001618BD /* Info.plist */,
 				8A3EF800262EAF75001618BD /* main.m */,
+				8A3EF83C262EAFEB001618BD /* Header.h */,
+				8A3EF840262EAFF5001618BD /* PrefixHeader.pch */,
 			);
 			path = FilmFactory;
 			sourceTree = "<group>";
@@ -137,6 +205,76 @@
 			path = FilmFactoryUITests;
 			sourceTree = "<group>";
 		};
+		8A3EF850262EB2CA001618BD /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3EF879262EB43D001618BD /* FilmFactoryHomeViewController.h */,
+				8A3EF87A262EB43D001618BD /* FilmFactoryHomeViewController.m */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		8A3EF851262EB2CF001618BD /* 动态 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3EF87F262EB5A9001618BD /* FilmFactoryZoneViewController.h */,
+				8A3EF880262EB5A9001618BD /* FilmFactoryZoneViewController.m */,
+				8A3EF894262EC1D4001618BD /* FilmFactoryZoneTableViewCell.h */,
+				8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */,
+				8A3EF89A262EC469001618BD /* FilmFactorySectionHeader.h */,
+				8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */,
+			);
+			path = "动态";
+			sourceTree = "<group>";
+		};
+		8A3EF852262EB2D8001618BD /* 消息 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3EF885262EB5BA001618BD /* FilmFactoryMsgViewController.h */,
+				8A3EF886262EB5BA001618BD /* FilmFactoryMsgViewController.m */,
+			);
+			path = "消息";
+			sourceTree = "<group>";
+		};
+		8A3EF853262EB2DB001618BD /* 我的 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3EF88B262EB5C5001618BD /* FilmFactoryMineViewController.h */,
+				8A3EF88C262EB5C5001618BD /* FilmFactoryMineViewController.m */,
+			);
+			path = "我的";
+			sourceTree = "<group>";
+		};
+		8A3EF854262EB2F8001618BD /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				8A3EF85E262EB321001618BD /* NSString+CHRegex.h */,
+				8A3EF85C262EB321001618BD /* NSString+CHRegex.m */,
+				8A3EF85B262EB321001618BD /* UIButton+CHRegex.h */,
+				8A3EF861262EB321001618BD /* UIButton+CHRegex.m */,
+				8A3EF855262EB320001618BD /* UIColor+CHRegex.h */,
+				8A3EF858262EB321001618BD /* UIColor+CHRegex.m */,
+				8A3EF856262EB320001618BD /* UILabel+CDGPSpaceLb.h */,
+				8A3EF859262EB321001618BD /* UILabel+CDGPSpaceLb.m */,
+				8A3EF85F262EB321001618BD /* UITextField+AddPlaceholder.h */,
+				8A3EF862262EB321001618BD /* UITextField+AddPlaceholder.m */,
+				8A3EF85D262EB321001618BD /* UIView+frame.h */,
+				8A3EF857262EB321001618BD /* UIView+frame.m */,
+				8A3EF860262EB321001618BD /* UIViewController+IOS13.h */,
+				8A3EF85A262EB321001618BD /* UIViewController+IOS13.m */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		EC3D3F412E57D6E18A262728 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6465A50B198E61C2023CE37 /* Pods-FilmFactory.debug.xcconfig */,
+				18116D595DADAB36A75DFE60 /* Pods-FilmFactory.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +282,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3EF81A262EAF75001618BD /* Build configuration list for PBXNativeTarget "FilmFactory" */;
 			buildPhases = (
+				B28AC0CB21739DE485C61A96 /* [CP] Check Pods Manifest.lock */,
 				8A3EF7E7262EAF73001618BD /* Sources */,
 				8A3EF7E8262EAF73001618BD /* Frameworks */,
 				8A3EF7E9262EAF73001618BD /* Resources */,
+				D66E9B7B9676C8D9862F2094 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -261,15 +401,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B28AC0CB21739DE485C61A96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FilmFactory-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D66E9B7B9676C8D9862F2094 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilmFactory/Pods-FilmFactory-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilmFactory/Pods-FilmFactory-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FilmFactory/Pods-FilmFactory-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8A3EF7E7262EAF73001618BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A3EF875262EB401001618BD /* FilmFactoryBaseViewController.m in Sources */,
+				8A3EF863262EB321001618BD /* UIView+frame.m in Sources */,
+				8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */,
+				8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */,
 				8A3EF7F6262EAF73001618BD /* ViewController.m in Sources */,
+				8A3EF881262EB5A9001618BD /* FilmFactoryZoneViewController.m in Sources */,
 				8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */,
+				8A3EF865262EB321001618BD /* UILabel+CDGPSpaceLb.m in Sources */,
 				8A3EF801262EAF75001618BD /* main.m in Sources */,
-				8A3EF7F3262EAF73001618BD /* SceneDelegate.m in Sources */,
+				8A3EF887262EB5BA001618BD /* FilmFactoryMsgViewController.m in Sources */,
+				8A3EF864262EB321001618BD /* UIColor+CHRegex.m in Sources */,
+				8A3EF867262EB321001618BD /* NSString+CHRegex.m in Sources */,
+				8A3EF87B262EB43D001618BD /* FilmFactoryHomeViewController.m in Sources */,
+				8A3EF868262EB321001618BD /* UIButton+CHRegex.m in Sources */,
+				8A3EF86F262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m in Sources */,
+				8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */,
+				8A3EF866262EB321001618BD /* UIViewController+IOS13.m in Sources */,
+				8A3EF869262EB321001618BD /* UITextField+AddPlaceholder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,35 +634,45 @@
 		};
 		8A3EF81B262EAF75001618BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6465A50B198E61C2023CE37 /* Pods-FilmFactory.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FilmFactory/PrefixHeader.pch";
 				INFOPLIST_FILE = FilmFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com-.FilmFactory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8A3EF81C262EAF75001618BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18116D595DADAB36A75DFE60 /* Pods-FilmFactory.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/FilmFactory/PrefixHeader.pch";
 				INFOPLIST_FILE = FilmFactory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com-.FilmFactory";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

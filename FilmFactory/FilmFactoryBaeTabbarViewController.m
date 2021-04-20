@@ -1,21 +1,51 @@
-//
-//  FilmFactoryBaeTabbarViewController.m
-//  FilmFactory
-//
-//  Created by zjlk03 on 2021/4/20.
-//
-
 #import "FilmFactoryBaeTabbarViewController.h"
 
 @interface FilmFactoryBaeTabbarViewController ()
-
+@property(nonatomic,strong) NSMutableArray  * XiaoxinPaperClassArr;
+@property(nonatomic,strong) NSMutableArray * XiaoxinPaperGlbalClassArr;
 @end
 
 @implementation FilmFactoryBaeTabbarViewController
 
+-(NSMutableArray *)XiaoxinPaperClassArr{
+    if (!_XiaoxinPaperClassArr) {
+        _XiaoxinPaperClassArr = [NSMutableArray arrayWithArray:@[@"FilmFactoryHomeViewController",@"FilmFactoryZoneViewController",@"FilmFactoryMsgViewController",@"FilmFactoryMineViewController"]];
+    }
+    return _XiaoxinPaperClassArr;
+}
+-(NSMutableArray *)XiaoxinPaperGlbalClassArr{
+    if (!_XiaoxinPaperGlbalClassArr) {
+        _XiaoxinPaperGlbalClassArr  = [NSMutableArray array];
+    }
+    return _XiaoxinPaperGlbalClassArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"wodenomal"];
+    NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"wodesel"];
+    NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"我的"];
+    for (int index = 0 ; index < self.XiaoxinPaperClassArr.count ; index ++) {
+        UIViewController * Xiaoxinpaper_Vc = [(UIViewController *)[NSClassFromString(_XiaoxinPaperClassArr[index]) alloc]init];
+        UIImage *Xiaoxinpaper_Nomal = [UIImage imageNamed:XiaoxinPaper_nomalArr[index]];
+        UIImage *Xiaoxinpaper_Seltecd = [UIImage imageNamed:XiaoxinPaper_selArr[index]];
+        Xiaoxinpaper_Vc.tabBarItem.image = [Xiaoxinpaper_Nomal imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        Xiaoxinpaper_Vc.tabBarItem.selectedImage = [Xiaoxinpaper_Seltecd imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        Xiaoxinpaper_Vc.tabBarItem.title =  FilmFactoryTitleArr[index];
+        UINavigationController  *WindwoundNav = [UINavigationController rootVC:Xiaoxinpaper_Vc translationScale:NO];
+        [self.XiaoxinPaperGlbalClassArr addObject:WindwoundNav];
+    }
+    GKNavigationBarConfigure *Xiaoxinpaper_Config = [GKNavigationBarConfigure sharedInstance];
+    [Xiaoxinpaper_Config setupDefaultConfigure];
+    Xiaoxinpaper_Config.backStyle = GKNavigationBarBackStyleBlack;
+    Xiaoxinpaper_Config.backgroundColor = [UIColor whiteColor];
+    Xiaoxinpaper_Config.titleColor = [UIColor blackColor];
+    Xiaoxinpaper_Config.titleFont = [UIFont boldSystemFontOfSize:18];
+    Xiaoxinpaper_Config.gk_navItemLeftSpace = K(15);
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:LGDMianColor, NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
+    self.viewControllers = _XiaoxinPaperGlbalClassArr;
+    self.tabBar.barTintColor = [UIColor whiteColor];
+    self.tabBar.translucent =NO;
 }
 
 /*
@@ -29,3 +59,6 @@
 */
 
 @end
+
+
+

@@ -6,18 +6,58 @@
 //
 
 #import "FilmFactoryZoneViewController.h"
-
-@interface FilmFactoryZoneViewController ()
-
+#import "FilmFactoryZoneTableViewCell.h"
+#import "FilmFactorySectionHeader.h"
+@interface FilmFactoryZoneViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property(nonatomic,strong) UITableView  * FilmFactoryTableView;
+@property(nonatomic,strong) NSMutableArray * FilmFactorydataArr;
 @end
 
 @implementation FilmFactoryZoneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.gk_navTitle = @"动态";
+    [self.view addSubview:self.FilmFactoryTableView];
+    // Do any additional setup after loading the view
 }
-
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 2;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return K(20);
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 10;
+}
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    FilmFactorySectionHeader * sectionHeader = [FilmFactorySectionHeader new];
+    sectionHeader.backgroundColor = [UIColor whiteColor];
+    return sectionHeader;
+}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *  FilmFactoryIdentifer = @"FilmFactoryZoneTableViewCell";
+    FilmFactoryZoneTableViewCell * FilmFactoryCell = [tableView dequeueReusableCellWithIdentifier:FilmFactoryIdentifer];
+    if (FilmFactoryCell == nil) {
+        FilmFactoryCell = [[FilmFactoryZoneTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFactoryIdentifer];
+    }
+    return FilmFactoryCell;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 180;
+}
+- (UITableView *)FilmFactoryTableView{
+    if (!_FilmFactoryTableView) {
+        _FilmFactoryTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-kTabBarHeight) style:UITableViewStyleGrouped];
+        _FilmFactoryTableView.delegate = self;
+        _FilmFactoryTableView.dataSource = self;
+        _FilmFactoryTableView.showsVerticalScrollIndicator = NO;
+        _FilmFactoryTableView.showsHorizontalScrollIndicator = NO;
+        _FilmFactoryTableView.backgroundColor =  [UIColor clearColor];
+        _FilmFactoryTableView.separatorStyle =  UITableViewCellSelectionStyleNone;
+    }
+    return _FilmFactoryTableView;
+}
 /*
 #pragma mark - Navigation
 

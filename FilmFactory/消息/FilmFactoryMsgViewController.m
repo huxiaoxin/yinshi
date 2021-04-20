@@ -8,13 +8,14 @@
 #import "FilmFactoryMsgViewController.h"
 
 @interface FilmFactoryMsgViewController ()
-
+@property(nonatomic,strong) UITableView * FilmFacotryMsgTableView;
 @end
 
 @implementation FilmFactoryMsgViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.view addSubview:self.FilmFacotryMsgTableView];
     // Do any additional setup after loading the view.
 }
 
