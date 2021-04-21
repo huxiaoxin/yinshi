@@ -9,7 +9,7 @@
 
 -(NSMutableArray *)XiaoxinPaperClassArr{
     if (!_XiaoxinPaperClassArr) {
-        _XiaoxinPaperClassArr = [NSMutableArray arrayWithArray:@[@"FilmFactoryHomeViewController",@"FilmFactoryZoneViewController",@"FilmFactoryMsgViewController",@"FilmFactoryMineViewController"]];
+        _XiaoxinPaperClassArr = [NSMutableArray arrayWithArray:@[@"FilmFactoryHomeViewController",@"FilmFactoryZoneViewController",@"FilmFactoryMsgViewController",@"FilmFactoryLoactionViewController",@"FilmFactoryMineViewController"]];
     }
     return _XiaoxinPaperClassArr;
 }
@@ -21,9 +21,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"wodenomal"];
-    NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"wodesel"];
-    NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"我的"];
+    NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"fangxiangnomal",@"wodenomal"];
+    NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"fangxiangsel",@"wodesel"];
+    NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"首映",@"我的"];
     for (int index = 0 ; index < self.XiaoxinPaperClassArr.count ; index ++) {
         UIViewController * Xiaoxinpaper_Vc = [(UIViewController *)[NSClassFromString(_XiaoxinPaperClassArr[index]) alloc]init];
         UIImage *Xiaoxinpaper_Nomal = [UIImage imageNamed:XiaoxinPaper_nomalArr[index]];

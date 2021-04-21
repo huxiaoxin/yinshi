@@ -18,10 +18,17 @@ PODS:
   - GKNavigationBarViewController (2.7.0)
   - JXCategoryView (1.5.8)
   - JXPagingView/Pager (2.0.13)
+  - KJBannerView (2.1.6):
+    - KJBannerView/KJBannerView (= 2.1.6)
+  - KJBannerView/Downloader (2.1.6):
+    - KJBannerView/KJBannerView
+  - KJBannerView/KJBannerView (2.1.6)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.15.7)
   - SCIndexView (2.2.4)
+  - SDCycleScrollView (1.82):
+    - SDWebImage (>= 5.0.0)
   - SDWebImage (5.11.0):
     - SDWebImage/Core (= 5.11.0)
   - SDWebImage/Core (5.11.0)
@@ -34,10 +41,13 @@ DEPENDENCIES:
   - GKNavigationBarViewController (~> 2.7.0)
   - JXCategoryView
   - JXPagingView/Pager
+  - KJBannerView
+  - KJBannerView/Downloader
   - Masonry
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh (~> 3.1.15.1)
   - SCIndexView (~> 2.2.4)
+  - SDCycleScrollView (~> 1.80)
   - SDWebImage
   - SPPageMenu (~> 3.5.0)
   - YYModel
@@ -49,10 +59,12 @@ SPEC REPOS:
     - GKNavigationBarViewController
     - JXCategoryView
     - JXPagingView
+    - KJBannerView
     - Masonry
     - MBProgressHUD
     - MJRefresh
     - SCIndexView
+    - SDCycleScrollView
     - SDWebImage
     - SPPageMenu
     - YYModel
@@ -63,14 +75,16 @@ SPEC CHECKSUMS:
   GKNavigationBarViewController: 72b8d2c6da7d1f02e44d5cf06b149b3616e48d9e
   JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
   JXPagingView: 821ed274f09eaf2843a96c3a74e9d138e27d9730
+  KJBannerView: 5390246a5f1a5aa67f5428c7941a533a11b103b6
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   SCIndexView: 20eba7a5ba1ffdf49a208031a82bf0549c0f9935
+  SDCycleScrollView: a0d74c3384caa72bdfc81470bdbc8c14b3e1fbcf
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
   SPPageMenu: da182aafcec55719d5c326103cc7716c1e48f311
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 23633c4a5cc97811a91b6fabd08c2b6af4b66946
+PODFILE CHECKSUM: 0a5c3b3881d0dd060e694faf97b4839f1cb5a786
 
 COCOAPODS: 1.10.1

@@ -17,4 +17,8 @@ pod 'SDWebImage'
 pod 'SCIndexView', '~> 2.2.4'
 pod 'JXPagingView/Pager'
 pod 'JXCategoryView'
+pod 'KJBannerView' # 轮播图
+pod 'KJBannerView/Downloader'
+pod 'SDCycleScrollView','~> 1.80'
+
 end 

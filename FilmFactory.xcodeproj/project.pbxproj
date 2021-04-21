@@ -34,6 +34,13 @@
 		8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF88C262EB5C5001618BD /* FilmFactoryMineViewController.m */; };
 		8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */; };
 		8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */; };
+		8A72B652262FB44400582123 /* FilmFacroyHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B651262FB44400582123 /* FilmFacroyHomeTableViewCell.m */; };
+		8A72B658262FB4C000582123 /* FilmFactoryHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B657262FB4C000582123 /* FilmFactoryHomeHeaderView.m */; };
+		8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B683262FBF4700582123 /* FilmFactoryMovieView.m */; };
+		8A72B68A262FC38800582123 /* FilmFactoryHomeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B689262FC38800582123 /* FilmFactoryHomeBtn.m */; };
+		8A72B6A3262FF1EC00582123 /* FilmFactoryLoactionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B6A2262FF1EC00582123 /* FilmFactoryLoactionViewController.m */; };
+		8A72B6AC262FF41500582123 /* FilmFactoryLoactionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B6AB262FF41500582123 /* FilmFactoryLoactionTableViewCell.m */; };
+		8A72B6B32630026400582123 /* FilmFactorHomeMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B6B22630026400582123 /* FilmFactorHomeMoreViewController.m */; };
 		DFA9BFE950DB437D2EE1B717 /* Pods_FilmFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +119,20 @@
 		8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryZoneTableViewCell.m; sourceTree = "<group>"; };
 		8A3EF89A262EC469001618BD /* FilmFactorySectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorySectionHeader.h; sourceTree = "<group>"; };
 		8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorySectionHeader.m; sourceTree = "<group>"; };
+		8A72B650262FB44400582123 /* FilmFacroyHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacroyHomeTableViewCell.h; sourceTree = "<group>"; };
+		8A72B651262FB44400582123 /* FilmFacroyHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacroyHomeTableViewCell.m; sourceTree = "<group>"; };
+		8A72B656262FB4C000582123 /* FilmFactoryHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryHomeHeaderView.h; sourceTree = "<group>"; };
+		8A72B657262FB4C000582123 /* FilmFactoryHomeHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryHomeHeaderView.m; sourceTree = "<group>"; };
+		8A72B682262FBF4700582123 /* FilmFactoryMovieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryMovieView.h; sourceTree = "<group>"; };
+		8A72B683262FBF4700582123 /* FilmFactoryMovieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryMovieView.m; sourceTree = "<group>"; };
+		8A72B688262FC38800582123 /* FilmFactoryHomeBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryHomeBtn.h; sourceTree = "<group>"; };
+		8A72B689262FC38800582123 /* FilmFactoryHomeBtn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryHomeBtn.m; sourceTree = "<group>"; };
+		8A72B6A1262FF1EC00582123 /* FilmFactoryLoactionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryLoactionViewController.h; sourceTree = "<group>"; };
+		8A72B6A2262FF1EC00582123 /* FilmFactoryLoactionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryLoactionViewController.m; sourceTree = "<group>"; };
+		8A72B6AA262FF41500582123 /* FilmFactoryLoactionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryLoactionTableViewCell.h; sourceTree = "<group>"; };
+		8A72B6AB262FF41500582123 /* FilmFactoryLoactionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryLoactionTableViewCell.m; sourceTree = "<group>"; };
+		8A72B6B12630026400582123 /* FilmFactorHomeMoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorHomeMoreViewController.h; sourceTree = "<group>"; };
+		8A72B6B22630026400582123 /* FilmFactorHomeMoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorHomeMoreViewController.m; sourceTree = "<group>"; };
 		D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6465A50B198E61C2023CE37 /* Pods-FilmFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmFactory.debug.xcconfig"; path = "Target Support Files/Pods-FilmFactory/Pods-FilmFactory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +196,7 @@
 		8A3EF7ED262EAF73001618BD /* FilmFactory */ = {
 			isa = PBXGroup;
 			children = (
+				8A72B6A0262FF1D200582123 /* 定位 */,
 				8A3EF854262EB2F8001618BD /* 工具 */,
 				8A3EF853262EB2DB001618BD /* 我的 */,
 				8A3EF852262EB2D8001618BD /* 消息 */,
@@ -220,8 +242,18 @@
 		8A3EF850262EB2CA001618BD /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				8A72B6BA263002D900582123 /* 橙子推荐 */,
+				8A72B6B02630024B00582123 /* 更多 */,
 				8A3EF879262EB43D001618BD /* FilmFactoryHomeViewController.h */,
 				8A3EF87A262EB43D001618BD /* FilmFactoryHomeViewController.m */,
+				8A72B650262FB44400582123 /* FilmFacroyHomeTableViewCell.h */,
+				8A72B651262FB44400582123 /* FilmFacroyHomeTableViewCell.m */,
+				8A72B656262FB4C000582123 /* FilmFactoryHomeHeaderView.h */,
+				8A72B657262FB4C000582123 /* FilmFactoryHomeHeaderView.m */,
+				8A72B682262FBF4700582123 /* FilmFactoryMovieView.h */,
+				8A72B683262FBF4700582123 /* FilmFactoryMovieView.m */,
+				8A72B688262FC38800582123 /* FilmFactoryHomeBtn.h */,
+				8A72B689262FC38800582123 /* FilmFactoryHomeBtn.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -284,6 +316,33 @@
 				8A3EF85A262EB321001618BD /* UIViewController+IOS13.m */,
 			);
 			path = "工具";
+			sourceTree = "<group>";
+		};
+		8A72B6A0262FF1D200582123 /* 定位 */ = {
+			isa = PBXGroup;
+			children = (
+				8A72B6A1262FF1EC00582123 /* FilmFactoryLoactionViewController.h */,
+				8A72B6A2262FF1EC00582123 /* FilmFactoryLoactionViewController.m */,
+				8A72B6AA262FF41500582123 /* FilmFactoryLoactionTableViewCell.h */,
+				8A72B6AB262FF41500582123 /* FilmFactoryLoactionTableViewCell.m */,
+			);
+			path = "定位";
+			sourceTree = "<group>";
+		};
+		8A72B6B02630024B00582123 /* 更多 */ = {
+			isa = PBXGroup;
+			children = (
+				8A72B6B12630026400582123 /* FilmFactorHomeMoreViewController.h */,
+				8A72B6B22630026400582123 /* FilmFactorHomeMoreViewController.m */,
+			);
+			path = "更多";
+			sourceTree = "<group>";
+		};
+		8A72B6BA263002D900582123 /* 橙子推荐 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "橙子推荐";
 			sourceTree = "<group>";
 		};
 		EC3D3F412E57D6E18A262728 /* Pods */ = {
@@ -470,19 +529,26 @@
 			files = (
 				8A3EF875262EB401001618BD /* FilmFactoryBaseViewController.m in Sources */,
 				8A3EF863262EB321001618BD /* UIView+frame.m in Sources */,
+				8A72B6B32630026400582123 /* FilmFactorHomeMoreViewController.m in Sources */,
+				8A72B68A262FC38800582123 /* FilmFactoryHomeBtn.m in Sources */,
 				8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */,
+				8A72B658262FB4C000582123 /* FilmFactoryHomeHeaderView.m in Sources */,
 				8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */,
 				8A3EF7F6262EAF73001618BD /* ViewController.m in Sources */,
 				8A3EF881262EB5A9001618BD /* FilmFactoryZoneViewController.m in Sources */,
 				8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */,
 				8A3EF865262EB321001618BD /* UILabel+CDGPSpaceLb.m in Sources */,
 				8A3EF801262EAF75001618BD /* main.m in Sources */,
+				8A72B652262FB44400582123 /* FilmFacroyHomeTableViewCell.m in Sources */,
+				8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */,
+				8A72B6AC262FF41500582123 /* FilmFactoryLoactionTableViewCell.m in Sources */,
 				8A3EF887262EB5BA001618BD /* FilmFactoryMsgViewController.m in Sources */,
 				8A3EF864262EB321001618BD /* UIColor+CHRegex.m in Sources */,
 				4A48FEBD262F159300D219D5 /* FilmFactoryBtn.m in Sources */,
 				8A3EF867262EB321001618BD /* NSString+CHRegex.m in Sources */,
 				8A3EF87B262EB43D001618BD /* FilmFactoryHomeViewController.m in Sources */,
 				8A3EF868262EB321001618BD /* UIButton+CHRegex.m in Sources */,
+				8A72B6A3262FF1EC00582123 /* FilmFactoryLoactionViewController.m in Sources */,
 				8A3EF86F262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m in Sources */,
 				8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */,
 				4A48FEB7262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m in Sources */,
