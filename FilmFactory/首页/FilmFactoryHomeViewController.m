@@ -9,6 +9,7 @@
 #import "FilmFacroyHomeTableViewCell.h"
 #import "FilmFactoryHomeHeaderView.h"
 #import "FilmFactorHomeMoreViewController.h"
+#import "FilmFacroryHomeDetailViewController.h"
 @interface FilmFactoryHomeViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFactoryHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
 @property(nonatomic,strong) FilmFactoryHomeHeaderView * FilmHeader;
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle =  @"橙子影视工厂";
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.FilmFactoryTableView];
     _FilmFactoryTableView.tableHeaderView =  self.FilmHeader;
     // Do any additional setup after loading the view.
@@ -57,7 +59,16 @@
     return FilmFacoryCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return K(200);
+    return K(120);
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
+        configure.backStyle = GKNavigationBarBackStyleWhite;
+        
+    }];
+    FilmFacroryHomeDetailViewController * FilmDetailVc = [[FilmFacroryHomeDetailViewController alloc]init];
+    FilmDetailVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:FilmDetailVc animated:YES];
 }
 #pragma mark--FilmFactoryHomeHeaderViewDelegate
 -(void)FilmFactoryHomeHeaderViewMToMoreVc{

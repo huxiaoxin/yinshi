@@ -7,6 +7,8 @@
 
 #import "FilmFactoryLoactionViewController.h"
 #import "FilmFactoryLoactionTableViewCell.h"
+#import "FilmFacorrLoactoinDetailViewController.h"
+#import "FilmFactorLoacitonTypeTableViewCell.h"
 @interface FilmFactoryLoactionViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
 @property(nonatomic,strong) NSMutableArray * FilmFactoryDataArr;
@@ -36,12 +38,17 @@
     return 10;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString  * FilmFactoryIdetifer =  @"FilmFactoryLoactionTableViewCell";
-    FilmFactoryLoactionTableViewCell * FilmFactoriCell = [tableView dequeueReusableCellWithIdentifier:FilmFactoryIdetifer];
+    static NSString  * FilmFactoryIdetifer =  @"FilmFactorLoacitonTypeTableViewCell";
+    FilmFactorLoacitonTypeTableViewCell * FilmFactoriCell = [tableView dequeueReusableCellWithIdentifier:FilmFactoryIdetifer];
     if (FilmFactoriCell == nil) {
-        FilmFactoriCell = [[FilmFactoryLoactionTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFactoryIdetifer];
+        FilmFactoriCell = [[FilmFactorLoacitonTypeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFactoryIdetifer];
     }
     return FilmFactoriCell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    FilmFacorrLoactoinDetailViewController  * locationDetaioVc  = [[FilmFacorrLoactoinDetailViewController alloc]init];
+    locationDetaioVc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:locationDetaioVc animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return K(100);

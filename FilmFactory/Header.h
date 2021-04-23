@@ -14,6 +14,7 @@
 #define KBlFont(b)        [UIFont fontWithName:@"DINAlternate-Bold" size:b]
 #define KFZPFont(b)        [UIFont fontWithName:@"FZPWJW--GB1-0" size:b]
 #define KSysFont(c)      [UIFont systemFontOfSize:c]
+#define RealWidth(a)        ((a*1.0)/375.0) * SCREEN_Width
 
 #define K(a)        ((a*1.0)/375.0) * SCREEN_Width
 #define kIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

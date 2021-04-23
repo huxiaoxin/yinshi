@@ -6,13 +6,20 @@
 //
 
 #import "FilmFactoryBaseViewController.h"
-
+#import "FilmFactoryLoginViewController.h"
 @interface FilmFactoryBaseViewController ()
 
 @end
 
 @implementation FilmFactoryBaseViewController
-
+-(void)FilmFactoryBaseShowLoginVc{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        FilmFactoryLoginViewController * FilmLoginVc = [[FilmFactoryLoginViewController alloc]init];
+        UINavigationController * filmNav = [UINavigationController rootVC:FilmLoginVc translationScale:YES];
+        [self presentViewController:filmNav animated:YES completion:nil];
+    });
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navLineHidden = YES;

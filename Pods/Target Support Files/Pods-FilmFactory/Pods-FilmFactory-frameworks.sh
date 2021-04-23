@@ -181,6 +181,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KJBannerView/KJBannerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LCProgressHUD/LCProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
@@ -189,6 +190,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPPageMenu/SPPageMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZWLimitCounter/ZWLimitCounter.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZWPlaceHolder/ZWPlaceHolder.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework"
@@ -197,6 +200,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/JXCategoryView/JXCategoryView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/JXPagingView/JXPagingView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/KJBannerView/KJBannerView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/LCProgressHUD/LCProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework"
@@ -205,6 +209,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPPageMenu/SPPageMenu.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZWLimitCounter/ZWLimitCounter.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/ZWPlaceHolder/ZWPlaceHolder.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -8,7 +8,6 @@ target 'FilmFactory' do
 pod 'AFNetworking'
 pod 'Masonry'
 pod 'YYModel'
-pod 'MBProgressHUD', '~> 1.0.0'
 pod 'DZNEmptyDataSet', '~> 1.8.1'
 pod 'MJRefresh', '~> 3.1.15.1'
 pod 'GKNavigationBarViewController', '~> 2.7.0'
@@ -20,5 +19,8 @@ pod 'JXCategoryView'
 pod 'KJBannerView' # 轮播图
 pod 'KJBannerView/Downloader'
 pod 'SDCycleScrollView','~> 1.80'
+pod 'LCProgressHUD'
+pod 'ZWLimitCounter',         '~> 0.0.4'
+pod 'ZWPlaceHolder', '~> 0.0.2'
 
 end 
