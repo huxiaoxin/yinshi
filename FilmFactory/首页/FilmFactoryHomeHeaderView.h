@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol FilmFactoryHomeHeaderViewDelegate <NSObject>
 
 -(void)FilmFactoryHomeHeaderViewMToMoreVc;
-
+-(void)FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:(NSInteger)banarIndex;
 @end
 @interface FilmFactoryHomeHeaderView : UIView
 @property(nonatomic,weak) id <FilmFactoryHomeHeaderViewDelegate>delegate;

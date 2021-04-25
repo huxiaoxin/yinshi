@@ -10,6 +10,7 @@
 #import "FilmFactoryHomeHeaderView.h"
 #import "FilmFactorHomeMoreViewController.h"
 #import "FilmFacroryHomeDetailViewController.h"
+#import <AVKit/AVKit.h>
 @interface FilmFactoryHomeViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFactoryHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
 @property(nonatomic,strong) FilmFactoryHomeHeaderView * FilmHeader;
@@ -76,10 +77,26 @@
     filmmoreVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:filmmoreVc animated:YES];
 }
+-(void)FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:(NSInteger)banarIndex{
+    NSString * viewourl;
+    if (banarIndex == 0) {
+        viewourl = @"https://vd4.bdstatic.com/mda-jeqhnpcwca3hb59p/sc/mda-jeqhnpcwca3hb59p.mp4?v_from_s=sz_haokan_4469&auth_key=1619363477-0-0-3ec8784175db4b1886228c4a8d174414&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=";
+    }else if (banarIndex == 1){
+        viewourl = @"https://vd2.bdstatic.com/mda-kcgw057saib93hp5/v1-cae/sc/mda-kcgw057saib93hp5.mp4?v_from_s=sz_haokan_4469&auth_key=1619363586-0-0-ddd40dba1dabc1e844e33b1a8aeadf68&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=";
+
+    }else{
+        viewourl = @"https://vd3.bdstatic.com/mda-mc9imcv9nv9gh7dv/sc/cae_h264_clips/1615354802/mda-mc9imcv9nv9gh7dv.mp4?auth_key=1619363698-0-0-5fc8819b82f4b091e4392268e597bf61&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=";
+
+    }
+    NSURL *url = [NSURL URLWithString:viewourl];
+    AVPlayerViewController *ctrl = [[AVPlayerViewController alloc] init];
+    ctrl.player= [[AVPlayer alloc]initWithURL:url];
+    [self presentViewController:ctrl animated:YES completion:nil];
+}
 -(void)FilmFactoryHeaderClicks{
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_FilmFactoryTableView.mj_header endRefreshing];
+        [self->_FilmFactoryTableView.mj_header endRefreshing];
     });
     
 }

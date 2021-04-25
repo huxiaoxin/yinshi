@@ -10,7 +10,7 @@
 #import "FilmFactoryMovieView.h"
 #import "FilmFactoryHomeBtn.h"
 #import <SDCycleScrollView.h>
-@interface FilmFactoryHomeHeaderView ()<KJBannerViewDataSource,KJBannerViewDelegate>
+@interface FilmFactoryHomeHeaderView ()<KJBannerViewDataSource,KJBannerViewDelegate,SDCycleScrollViewDelegate>
 @property(nonatomic,strong) KJBannerView   * Filmbanar;
 @property(nonatomic,strong) NSMutableArray * banarModelArr;
 @property(nonatomic,strong) FilmFactoryMovieView         * movieView;
@@ -52,6 +52,7 @@
         int width = SCREEN_Width-K(30);
         SDCycleScrollView * SDCView = [[SDCycleScrollView alloc]initWithFrame:CGRectMake(K(15), CGRectGetMaxY(btnView.frame)+K(10), width, K(80))];
         SDCView.showPageControl = NO;
+        SDCView.delegate = self;
         [self addSubview:SDCView];
         SDCView.imageURLStringsGroup = @[@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img3.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img2.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img1.png"];
         
@@ -136,5 +137,9 @@
     return @[@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2F01.minipic.eastday.com%2F20171211%2F20171211185710_66c75b95e5421bbc73d255836976d21d_5.jpeg&refer=http%3A%2F%2F01.minipic.eastday.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621562150&t=4295d134064e3ebd11f6a82c581b6d44",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2254925766,233962270&fm=224&gp=0.jpg"];
 }
 - (void)kj_BannerView:(KJBannerView *)banner SelectIndex:(NSInteger)index{
+}
+#pragma mark--SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    [self.delegate FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:index];
 }
 @end

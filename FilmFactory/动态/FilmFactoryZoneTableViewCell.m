@@ -19,6 +19,8 @@
 @property(nonatomic,strong) UILabel * FilmFacoryComentNumlb;
 @property(nonatomic,strong) UIButton * FilmFacorypinbiBtn;
 @property(nonatomic,strong) UIButton * FilmFactoryjubaoBtn;
+@property(nonatomic,strong) UIButton * FilmFactorchatBtn;
+
 @end
 @implementation FilmFactoryZoneTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
@@ -36,12 +38,14 @@
         [_FilmFactoyReVICE_paopaoIMgView addSubview:self.FilmFacoryComentNumlb];
         [_FilmFactoyReVICE_paopaoIMgView addSubview:self.FilmFacorypinbiBtn];
         [_FilmFactoyReVICE_paopaoIMgView addSubview:self.FilmFactoryjubaoBtn];
+        [_FilmFactoyReVICE_paopaoIMgView addSubview:self.FilmFactorchatBtn];
+
     }
     return self;
 }
 - (UIView *)FilmFactoryIndicotrView{
     if (!_FilmFactoryIndicotrView) {
-        _FilmFactoryIndicotrView = [[UIView alloc]initWithFrame:CGRectMake(K(20), 0, K(2), K(180))];
+        _FilmFactoryIndicotrView = [[UIView alloc]initWithFrame:CGRectMake(K(20), 0, K(2), K(195))];
         _FilmFactoryIndicotrView.backgroundColor = LGDMianColor;
     }
     return _FilmFactoryIndicotrView;
@@ -49,6 +53,7 @@
 - (UIImageView *)FilmFactoyReVICE_paopaoIMgView{
     if (!_FilmFactoyReVICE_paopaoIMgView) {
         _FilmFactoyReVICE_paopaoIMgView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_FilmFactoryIndicotrView.frame)+(5), K(20), SCREEN_Width-CGRectGetMaxX(_FilmFactoryIndicotrView.frame)-K(20), K(150))];
+        _FilmFactoyReVICE_paopaoIMgView.userInteractionEnabled = YES;
         _FilmFactoyReVICE_paopaoIMgView.image = self.FilmFactoryReVICE_uiimaname;
     }
     return _FilmFactoyReVICE_paopaoIMgView;
@@ -85,6 +90,7 @@
         _FilmThubImgView.backgroundColor = LGDLightGaryColor;
         _FilmThubImgView.layer.cornerRadius = 5;
         _FilmThubImgView.layer.masksToBounds = YES;
+        _FilmThubImgView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _FilmThubImgView;
 }
@@ -111,6 +117,7 @@
 - (UIButton *)FilmFacorypinbiBtn{
     if (!_FilmFacorypinbiBtn) {
         _FilmFacorypinbiBtn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetWidth(_FilmFactoyReVICE_paopaoIMgView.frame)-K(60), CGRectGetMidY(_FilmFactoryuserImgView.frame)-K(15), K(40), K(20))];
+        _FilmFacorypinbiBtn.tag = 2;
         [_FilmFacorypinbiBtn setBackgroundColor:LGDMianColor];
         [_FilmFacorypinbiBtn setTitle:@"屏蔽" forState:UIControlStateNormal];
         [_FilmFacorypinbiBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -118,12 +125,15 @@
         _FilmFacorypinbiBtn.titleLabel.font = [UIFont systemFontOfSize:13];
         _FilmFacorypinbiBtn.layer.cornerRadius = K(5);
         _FilmFacorypinbiBtn.layer.masksToBounds = YES;
+        [_FilmFacorypinbiBtn addTarget:self action:@selector(FilmFactorchatBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+
     }
     return _FilmFacorypinbiBtn;
 }
 - (UIButton *)FilmFactoryjubaoBtn{
     if (!_FilmFactoryjubaoBtn) {
         _FilmFactoryjubaoBtn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMinX(_FilmFacorypinbiBtn.frame)-K(50), CGRectGetMidY(_FilmFactoryuserImgView.frame)-K(15), K(40), K(20))];
+        _FilmFactoryjubaoBtn.tag = 1;
         [_FilmFactoryjubaoBtn setBackgroundColor:[UIColor redColor]];
         [_FilmFactoryjubaoBtn setTitle:@"举报" forState:UIControlStateNormal];
         [_FilmFactoryjubaoBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -131,9 +141,27 @@
         _FilmFactoryjubaoBtn.titleLabel.font = [UIFont systemFontOfSize:13];
         _FilmFactoryjubaoBtn.layer.cornerRadius = K(5);
         _FilmFactoryjubaoBtn.layer.masksToBounds = YES;
+        [_FilmFactoryjubaoBtn addTarget:self action:@selector(FilmFactorchatBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+
     }
     return _FilmFactoryjubaoBtn;
 }
+- (UIButton *)FilmFactorchatBtn{
+    if (!_FilmFactorchatBtn) {
+        _FilmFactorchatBtn = [[UIButton alloc]initWithFrame:CGRectMake(CGRectGetMinX(_FilmFactoryjubaoBtn.frame)-K(50), CGRectGetMidY(_FilmFactoryuserImgView.frame)-K(15), K(40), K(20))];
+        _FilmFactorchatBtn.tag = 0;
+        [_FilmFactorchatBtn setBackgroundColor:[UIColor colorWithHexString:@"0000FF"]];
+        [_FilmFactorchatBtn setTitle:@"密聊" forState:UIControlStateNormal];
+        [_FilmFactorchatBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        _FilmFactorchatBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
+        _FilmFactorchatBtn.titleLabel.font = [UIFont systemFontOfSize:13];
+        _FilmFactorchatBtn.layer.cornerRadius = K(5);
+        _FilmFactorchatBtn.layer.masksToBounds = YES;
+        [_FilmFactorchatBtn addTarget:self action:@selector(FilmFactorchatBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _FilmFactorchatBtn;
+}
+
 - (UIImage *)FilmFactoryReVICE_uiimaname{
     if (!_FilmFactoryReVICE_uiimaname) {
         UIImage *image  = [UIImage imageNamed:@"wzm_chat_bj1"];
@@ -141,5 +169,18 @@
         _FilmFactoryReVICE_uiimaname = [image stretchableImageWithLeftCapWidth:size.width/2 topCapHeight:size.height*0.8];
     }
     return _FilmFactoryReVICE_uiimaname;
+}
+- (void)setFilmModel:(FilmFactoryZoneModel *)filmModel{
+    _filmModel = filmModel;
+    [_FilmFactoryuserImgView sd_setImageWithURL:[NSURL URLWithString:filmModel.userImgIcon]];
+    _FilmFactoryToplb.text = filmModel.name;
+    _FilmFactoryTimelb.text = filmModel.times;
+    NSString * thubStr =  [filmModel.imgThuburls objectAtIndex:0];
+    [_FilmThubImgView sd_setImageWithURL:[NSURL URLWithString:thubStr]];
+    _FilmFacoryTopTitle.text =  filmModel.title;
+    _FilmFactorDetailb.text =  filmModel.detail;
+}
+-(void)FilmFactorchatBtnClick:(UIButton *)mybtn{
+    [self.delegate FilmFactoryZoneTableViewCellWithBtnClickIndex:mybtn.tag CellConfigIndex:self.myIndexpath];
 }
 @end

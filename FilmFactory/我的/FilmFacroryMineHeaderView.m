@@ -25,7 +25,7 @@
         [self addSubview:self.FilmToplb];
         [self addSubview:self.FilmBtomlb];
         [self addSubview:self.FilmChangeBtn];
-        NSArray * FilmBtnArr = @[@"我的发布",@"我的预约",@"我的动态"];
+        NSArray * FilmBtnArr = @[@"我的发布",@"我的预约",@"我的浏览"];
         for (int index = 0; index < FilmBtnArr.count; index ++) {
             FilmFacroyCenterBtn * factorBtn = [[FilmFacroyCenterBtn alloc]initWithFrame:CGRectMake(SCREEN_Width/FilmBtnArr.count*index, K(180), SCREEN_Width/FilmBtnArr.count, K(70))];
             factorBtn.FIlmBtomlb.text = FilmBtnArr[index];

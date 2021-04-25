@@ -6,11 +6,11 @@
 //
 
 #import "FilmFactoryBaseViewController.h"
-
+#import "FilmFactortLoactionModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FilmFacorrLoactoinDetailViewController : FilmFactoryBaseViewController
-
+@property(nonatomic,strong) FilmFactortLoactionModel * filmLoactionModel;
 @end
 
 NS_ASSUME_NONNULL_END

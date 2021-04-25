@@ -6,11 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FilmFactortLoactionModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FilmFactorLoacitonTypeTableViewCell : UITableViewCell
-
+@property(nonatomic,strong) FilmFactortLoactionModel * loactionModel;
 @end
 
 NS_ASSUME_NONNULL_END
