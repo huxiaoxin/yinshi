@@ -18,6 +18,7 @@
 @implementation FilmFacotryMsgTableViewCell
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.FilmFactoryView];
         [_FilmFactoryView addSubview:self.FilmFaotryuserImgView];
@@ -57,7 +58,7 @@
 }
 - (UILabel *)FilmFactoryBtomlb{
     if (!_FilmFactoryBtomlb) {
-        _FilmFactoryBtomlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_FilmFaotryuserImgView.frame)+K(8), CGRectGetMaxY(_FilmFactoryToplb.frame)+K(7), K(200), K(13))];
+        _FilmFactoryBtomlb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_FilmFaotryuserImgView.frame)+K(8), CGRectGetMaxY(_FilmFactoryToplb.frame)+K(7), K(250), K(13))];
         _FilmFactoryBtomlb.textColor = LGDGaryColor;
         _FilmFactoryBtomlb.font = [UIFont systemFontOfSize:12];
         _FilmFactoryBtomlb.text = @"铁臂阿童木铁臂阿童木铁臂阿童木铁臂阿童木铁臂阿童木铁臂阿童木";
@@ -86,5 +87,14 @@
         _FilmFactoryNumlb.text = @"12";
     }
     return _FilmFactoryNumlb;
+}
+- (void)setFilmModel:(FilmChatMsgListModel *)FilmModel{
+    _FilmModel = FilmModel;
+    [_FilmFaotryuserImgView sd_setImageWithURL:[NSURL URLWithString:FilmModel.imgurl]];
+    _FilmFactoryToplb.text  = FilmModel.topname;
+    _FilmFactoryBtomlb.text = FilmModel.content;
+    _FilmFactoryTimelb.text = FilmModel.time;
+    _FilmFactoryNumlb.text=  [NSString stringWithFormat:@"%ld",FilmModel.redNum];
+    _FilmFactoryNumlb.hidden = !FilmModel.isShowRed;
 }
 @end

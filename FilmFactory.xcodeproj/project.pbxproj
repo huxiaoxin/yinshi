@@ -51,6 +51,19 @@
 		8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF88C262EB5C5001618BD /* FilmFactoryMineViewController.m */; };
 		8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */; };
 		8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */; };
+		8A54C4AF26364A95008E3A6B /* FilmFactroysysTemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4AE26364A95008E3A6B /* FilmFactroysysTemViewController.m */; };
+		8A54C4B826364AA1008E3A6B /* FilmFactoryZanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4B726364AA1008E3A6B /* FilmFactoryZanViewController.m */; };
+		8A54C4BE26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4BD26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m */; };
+		8A54C4C426364C5E008E3A6B /* FilmFactroysystemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4C326364C5E008E3A6B /* FilmFactroysystemTableViewCell.m */; };
+		8A54C4CA263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4C9263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m */; };
+		8A54C4D726366912008E3A6B /* FilmChatDetailMoel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4D026366911008E3A6B /* FilmChatDetailMoel.m */; };
+		8A54C4D826366912008E3A6B /* FilmChatDetailTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4D426366912008E3A6B /* FilmChatDetailTableCell.m */; };
+		8A54C4D926366912008E3A6B /* FilmChatZoneChatDetailToolsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4D526366912008E3A6B /* FilmChatZoneChatDetailToolsView.m */; };
+		8A54C4DA26366912008E3A6B /* FilmChatChatDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4D626366912008E3A6B /* FilmChatChatDetailViewController.m */; };
+		8A54C4E026366946008E3A6B /* FilmChatMsgListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4DE26366946008E3A6B /* FilmChatMsgListModel.m */; };
+		8A54C4E726366CC0008E3A6B /* FilmFactoryNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4E626366CC0008E3A6B /* FilmFactoryNewsViewController.m */; };
+		8A54C502263680E0008E3A6B /* FilmFActorySendZoneConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C4FE263680E0008E3A6B /* FilmFActorySendZoneConroller.m */; };
+		8A54C503263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A54C500263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.m */; };
 		8A72B652262FB44400582123 /* FilmFacroyHomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B651262FB44400582123 /* FilmFacroyHomeTableViewCell.m */; };
 		8A72B658262FB4C000582123 /* FilmFactoryHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B657262FB4C000582123 /* FilmFactoryHomeHeaderView.m */; };
 		8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A72B683262FBF4700582123 /* FilmFactoryMovieView.m */; };
@@ -185,6 +198,32 @@
 		8A3EF895262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryZoneTableViewCell.m; sourceTree = "<group>"; };
 		8A3EF89A262EC469001618BD /* FilmFactorySectionHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorySectionHeader.h; sourceTree = "<group>"; };
 		8A3EF89B262EC469001618BD /* FilmFactorySectionHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorySectionHeader.m; sourceTree = "<group>"; };
+		8A54C4AD26364A95008E3A6B /* FilmFactroysysTemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactroysysTemViewController.h; sourceTree = "<group>"; };
+		8A54C4AE26364A95008E3A6B /* FilmFactroysysTemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactroysysTemViewController.m; sourceTree = "<group>"; };
+		8A54C4B626364AA1008E3A6B /* FilmFactoryZanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryZanViewController.h; sourceTree = "<group>"; };
+		8A54C4B726364AA1008E3A6B /* FilmFactoryZanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryZanViewController.m; sourceTree = "<group>"; };
+		8A54C4BC26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryComenmtNotiViewController.h; sourceTree = "<group>"; };
+		8A54C4BD26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryComenmtNotiViewController.m; sourceTree = "<group>"; };
+		8A54C4C226364C5E008E3A6B /* FilmFactroysystemTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactroysystemTableViewCell.h; sourceTree = "<group>"; };
+		8A54C4C326364C5E008E3A6B /* FilmFactroysystemTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactroysystemTableViewCell.m; sourceTree = "<group>"; };
+		8A54C4C8263666E4008E3A6B /* FilmFacotrysystemDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotrysystemDetailViewController.h; sourceTree = "<group>"; };
+		8A54C4C9263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotrysystemDetailViewController.m; sourceTree = "<group>"; };
+		8A54C4CF26366911008E3A6B /* FilmChatChatDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatChatDetailViewController.h; sourceTree = "<group>"; };
+		8A54C4D026366911008E3A6B /* FilmChatDetailMoel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatDetailMoel.m; sourceTree = "<group>"; };
+		8A54C4D126366912008E3A6B /* FilmChatDetailMoel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatDetailMoel.h; sourceTree = "<group>"; };
+		8A54C4D226366912008E3A6B /* FilmChatDetailTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatDetailTableCell.h; sourceTree = "<group>"; };
+		8A54C4D326366912008E3A6B /* FilmChatZoneChatDetailToolsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatZoneChatDetailToolsView.h; sourceTree = "<group>"; };
+		8A54C4D426366912008E3A6B /* FilmChatDetailTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatDetailTableCell.m; sourceTree = "<group>"; };
+		8A54C4D526366912008E3A6B /* FilmChatZoneChatDetailToolsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatZoneChatDetailToolsView.m; sourceTree = "<group>"; };
+		8A54C4D626366912008E3A6B /* FilmChatChatDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatChatDetailViewController.m; sourceTree = "<group>"; };
+		8A54C4DE26366946008E3A6B /* FilmChatMsgListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmChatMsgListModel.m; sourceTree = "<group>"; };
+		8A54C4DF26366946008E3A6B /* FilmChatMsgListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmChatMsgListModel.h; sourceTree = "<group>"; };
+		8A54C4E526366CC0008E3A6B /* FilmFactoryNewsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryNewsViewController.h; sourceTree = "<group>"; };
+		8A54C4E626366CC0008E3A6B /* FilmFactoryNewsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryNewsViewController.m; sourceTree = "<group>"; };
+		8A54C4FE263680E0008E3A6B /* FilmFActorySendZoneConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmFActorySendZoneConroller.m; sourceTree = "<group>"; };
+		8A54C4FF263680E0008E3A6B /* FilmFActorySendZoneConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmFActorySendZoneConroller.h; sourceTree = "<group>"; };
+		8A54C500263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmFactorySendZoneCollectionCell.m; sourceTree = "<group>"; };
+		8A54C501263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmFactorySendZoneCollectionCell.h; sourceTree = "<group>"; };
 		8A72B650262FB44400582123 /* FilmFacroyHomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacroyHomeTableViewCell.h; sourceTree = "<group>"; };
 		8A72B651262FB44400582123 /* FilmFacroyHomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacroyHomeTableViewCell.m; sourceTree = "<group>"; };
 		8A72B656262FB4C000582123 /* FilmFactoryHomeHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryHomeHeaderView.h; sourceTree = "<group>"; };
@@ -365,6 +404,7 @@
 		8A3EF850262EB2CA001618BD /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				8A54C4E426366CB0008E3A6B /* 影视资讯 */,
 				8A91B79C26326577006A3EC1 /* 首页详情 */,
 				8A72B6B02630024B00582123 /* 更多 */,
 				8A3EF879262EB43D001618BD /* FilmFactoryHomeViewController.h */,
@@ -384,6 +424,7 @@
 		8A3EF851262EB2CF001618BD /* 动态 */ = {
 			isa = PBXGroup;
 			children = (
+				8A54C4FD263680CD008E3A6B /* 发布 */,
 				4AEE2C1B2635AB1700B2BC43 /* 举报 */,
 				4AE8DC0C26355E0200D9A0FB /* 详情 */,
 				8A3EF87F262EB5A9001618BD /* FilmFactoryZoneViewController.h */,
@@ -403,6 +444,10 @@
 		8A3EF852262EB2D8001618BD /* 消息 */ = {
 			isa = PBXGroup;
 			children = (
+				8A54C4CE263668F4008E3A6B /* 聊天 */,
+				8A54C4AC26364A77008E3A6B /* 评论通知 */,
+				8A54C4AB26364A6B008E3A6B /* 点赞通知 */,
+				8A54C4A926364A5E008E3A6B /* 系统消息 */,
 				8A3EF885262EB5BA001618BD /* FilmFactoryMsgViewController.h */,
 				8A3EF886262EB5BA001618BD /* FilmFactoryMsgViewController.m */,
 				4A48FEC7262F19CC00D219D5 /* FilmFacotryMsgTableViewCell.h */,
@@ -457,6 +502,74 @@
 				8A3EF85A262EB321001618BD /* UIViewController+IOS13.m */,
 			);
 			path = "工具";
+			sourceTree = "<group>";
+		};
+		8A54C4A926364A5E008E3A6B /* 系统消息 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C4AD26364A95008E3A6B /* FilmFactroysysTemViewController.h */,
+				8A54C4AE26364A95008E3A6B /* FilmFactroysysTemViewController.m */,
+				8A54C4C226364C5E008E3A6B /* FilmFactroysystemTableViewCell.h */,
+				8A54C4C326364C5E008E3A6B /* FilmFactroysystemTableViewCell.m */,
+				8A54C4C8263666E4008E3A6B /* FilmFacotrysystemDetailViewController.h */,
+				8A54C4C9263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m */,
+			);
+			path = "系统消息";
+			sourceTree = "<group>";
+		};
+		8A54C4AB26364A6B008E3A6B /* 点赞通知 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C4B626364AA1008E3A6B /* FilmFactoryZanViewController.h */,
+				8A54C4B726364AA1008E3A6B /* FilmFactoryZanViewController.m */,
+			);
+			path = "点赞通知";
+			sourceTree = "<group>";
+		};
+		8A54C4AC26364A77008E3A6B /* 评论通知 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C4BC26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.h */,
+				8A54C4BD26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m */,
+			);
+			path = "评论通知";
+			sourceTree = "<group>";
+		};
+		8A54C4CE263668F4008E3A6B /* 聊天 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C4D126366912008E3A6B /* FilmChatDetailMoel.h */,
+				8A54C4D026366911008E3A6B /* FilmChatDetailMoel.m */,
+				8A54C4D226366912008E3A6B /* FilmChatDetailTableCell.h */,
+				8A54C4D426366912008E3A6B /* FilmChatDetailTableCell.m */,
+				8A54C4D326366912008E3A6B /* FilmChatZoneChatDetailToolsView.h */,
+				8A54C4D526366912008E3A6B /* FilmChatZoneChatDetailToolsView.m */,
+				8A54C4CF26366911008E3A6B /* FilmChatChatDetailViewController.h */,
+				8A54C4D626366912008E3A6B /* FilmChatChatDetailViewController.m */,
+				8A54C4DF26366946008E3A6B /* FilmChatMsgListModel.h */,
+				8A54C4DE26366946008E3A6B /* FilmChatMsgListModel.m */,
+			);
+			path = "聊天";
+			sourceTree = "<group>";
+		};
+		8A54C4E426366CB0008E3A6B /* 影视资讯 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C4E526366CC0008E3A6B /* FilmFactoryNewsViewController.h */,
+				8A54C4E626366CC0008E3A6B /* FilmFactoryNewsViewController.m */,
+			);
+			path = "影视资讯";
+			sourceTree = "<group>";
+		};
+		8A54C4FD263680CD008E3A6B /* 发布 */ = {
+			isa = PBXGroup;
+			children = (
+				8A54C501263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.h */,
+				8A54C500263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.m */,
+				8A54C4FF263680E0008E3A6B /* FilmFActorySendZoneConroller.h */,
+				8A54C4FE263680E0008E3A6B /* FilmFActorySendZoneConroller.m */,
+			);
+			path = "发布";
 			sourceTree = "<group>";
 		};
 		8A72B6A0262FF1D200582123 /* 定位 */ = {
@@ -734,15 +847,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A54C4E026366946008E3A6B /* FilmChatMsgListModel.m in Sources */,
+				8A54C4D826366912008E3A6B /* FilmChatDetailTableCell.m in Sources */,
 				8A3EF875262EB401001618BD /* FilmFactoryBaseViewController.m in Sources */,
 				8A3EF863262EB321001618BD /* UIView+frame.m in Sources */,
 				8A72B6B32630026400582123 /* FilmFactorHomeMoreViewController.m in Sources */,
 				4AE8DBBC263506D900D9A0FB /* FilmFacotryLocationDetailHeader.m in Sources */,
 				8A72B68A262FC38800582123 /* FilmFactoryHomeBtn.m in Sources */,
 				4AE8DBDA2635113000D9A0FB /* FilmLoactionJoinViewController.m in Sources */,
+				8A54C4C426364C5E008E3A6B /* FilmFactroysystemTableViewCell.m in Sources */,
 				8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */,
 				8A91B79F2632658C006A3EC1 /* FilmFacroryHomeDetailViewController.m in Sources */,
 				8A72B658262FB4C000582123 /* FilmFactoryHomeHeaderView.m in Sources */,
+				8A54C503263680E0008E3A6B /* FilmFactorySendZoneCollectionCell.m in Sources */,
 				8A3EF88D262EB5C5001618BD /* FilmFactoryMineViewController.m in Sources */,
 				8A3EF7F6262EAF73001618BD /* ViewController.m in Sources */,
 				4AE8DBC826350CCE00D9A0FB /* FilmFacortLoactionDetailFooter.m in Sources */,
@@ -750,9 +867,11 @@
 				4AE8DC362635686600D9A0FB /* LMJHorizontalScrollText.m in Sources */,
 				8A91B8352632A033006A3EC1 /* FilmFactoryAboutusViewController.m in Sources */,
 				8A3EF881262EB5A9001618BD /* FilmFactoryZoneViewController.m in Sources */,
+				8A54C4D926366912008E3A6B /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */,
 				4AEE2C242635AB4100B2BC43 /* FilmZoneJbaoController.m in Sources */,
 				8A3EF865262EB321001618BD /* UILabel+CDGPSpaceLb.m in Sources */,
+				8A54C502263680E0008E3A6B /* FilmFActorySendZoneConroller.m in Sources */,
 				8A91B7A526326620006A3EC1 /* FilmFacoryHomeDetailHeader.m in Sources */,
 				8A91B85C2632A331006A3EC1 /* FilmFactoryFindPasseordViewController.m in Sources */,
 				4AE8DBE62635210100D9A0FB /* AppDelegate+FilmMySafeApp.m in Sources */,
@@ -762,9 +881,12 @@
 				8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */,
 				4AE8DC1826355E6C00D9A0FB /* FilmFacorryZoneDetailheader.m in Sources */,
 				8A72B6AC262FF41500582123 /* FilmFactoryLoactionTableViewCell.m in Sources */,
+				8A54C4D726366912008E3A6B /* FilmChatDetailMoel.m in Sources */,
+				8A54C4AF26364A95008E3A6B /* FilmFactroysysTemViewController.m in Sources */,
 				8A91B84D2632A319006A3EC1 /* FilmFactoryLoginViewController.m in Sources */,
 				8A3EF887262EB5BA001618BD /* FilmFactoryMsgViewController.m in Sources */,
 				8A91B8462632A119006A3EC1 /* FilmFacroyCenterBtn.m in Sources */,
+				8A54C4BE26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m in Sources */,
 				8A3EF864262EB321001618BD /* UIColor+CHRegex.m in Sources */,
 				4A48FEBD262F159300D219D5 /* FilmFactoryBtn.m in Sources */,
 				8A3EF867262EB321001618BD /* NSString+CHRegex.m in Sources */,
@@ -780,12 +902,16 @@
 				4A48FEB7262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m in Sources */,
 				8A3EF866262EB321001618BD /* UIViewController+IOS13.m in Sources */,
 				8A91B7AB263268D6006A3EC1 /* FilmacroryMineTableViewCell.m in Sources */,
+				8A54C4E726366CC0008E3A6B /* FilmFactoryNewsViewController.m in Sources */,
+				8A54C4B826364AA1008E3A6B /* FilmFactoryZanViewController.m in Sources */,
 				4AE8DBC226350B2900D9A0FB /* FilmFacroryLoacitonDetailTableViewCell.m in Sources */,
 				8A91B8752632AAFA006A3EC1 /* FilmFactorLoacitonTypeTableViewCell.m in Sources */,
+				8A54C4DA26366912008E3A6B /* FilmChatChatDetailViewController.m in Sources */,
 				4AE8DC0F26355E1A00D9A0FB /* FilmFactoryZoneDetailViewController.m in Sources */,
 				8A3EF869262EB321001618BD /* UITextField+AddPlaceholder.m in Sources */,
 				4AEE2C222635AB4100B2BC43 /* FilmZoneJubaoModel.m in Sources */,
 				8A91B81226329C90006A3EC1 /* FilmFactoryModel.m in Sources */,
+				8A54C4CA263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m in Sources */,
 				4A48FEC9262F19CC00D219D5 /* FilmFacotryMsgTableViewCell.m in Sources */,
 				4AEE2C232635AB4100B2BC43 /* FilmZoneJubaoTableviewCell.m in Sources */,
 				4AE8DC08263550FB00D9A0FB /* FilmFactoryComentModel.m in Sources */,

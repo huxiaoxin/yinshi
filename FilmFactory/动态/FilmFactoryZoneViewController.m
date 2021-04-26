@@ -11,6 +11,8 @@
 #import "FilmFactoryZoneModel.h"
 #import "FilmFactoryZoneDetailViewController.h"
 #import "FilmZoneJbaoController.h"
+#import "FilmChatChatDetailViewController.h"
+#import "FilmFActorySendZoneConroller.h"
 @interface FilmFactoryZoneViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFactoryZoneTableViewCellDelegate>
 @property(nonatomic,strong) UITableView  * FilmFactoryTableView;
 @property(nonatomic,strong) NSMutableArray * FilmFactorydataArr;
@@ -32,7 +34,27 @@
     UIView * lkHeader = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, 10)];
     lkHeader.backgroundColor = [UIColor clearColor];
     _FilmFactoryTableView.tableHeaderView =  lkHeader;
+    
+    UIView * FilmItemAdvicCommitView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, K(80), K(60))];
+    UIButton * FilmItemAdvicCommitbtn = [[UIButton alloc]initWithFrame:CGRectMake(K(20), K(12), K(40), K(20))];
+    [FilmItemAdvicCommitbtn setTitle:@"发布" forState:UIControlStateNormal];
+    [FilmItemAdvicCommitbtn setTitleColor:LGDBLackColor forState:UIControlStateNormal];
+    FilmItemAdvicCommitbtn.titleLabel.font =[UIFont systemFontOfSize:14];
+    [FilmItemAdvicCommitbtn addTarget:self action:@selector(FilmItemAdvicCommitbtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [FilmItemAdvicCommitView addSubview:FilmItemAdvicCommitbtn];
+    
+    self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:FilmItemAdvicCommitView];
+    
     // Do any additional setup after loading the view
+}
+-(void)FilmItemAdvicCommitbtnClick{
+    
+    FilmFActorySendZoneConroller * FilmdSendVc =[[FilmFActorySendZoneConroller alloc]init];
+    
+    UINavigationController * FilmNav = [UINavigationController rootVC:FilmdSendVc translationScale:YES];
+    
+    [self.navigationController presentViewController:FilmNav animated:YES completion:nil];
+    
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [self.FilmFactorydataArr[section] count];
@@ -107,7 +129,14 @@
 -(void)FilmFactoryZoneTableViewCellWithBtnClickIndex:(NSInteger)btnIndex CellConfigIndex:( NSIndexPath *)cellIndex{
     FilmFactoryZoneModel * filmModel = self.FilmFactorydataArr[cellIndex.section][cellIndex.row];
     if (btnIndex == 0) {
-        
+        FilmChatMsgListModel * myfilmModel = [[FilmChatMsgListModel alloc]init];
+        myfilmModel.ChatID = filmModel.ZoneDetrailID;
+        myfilmModel.imgurl = filmModel.userImgIcon;
+        myfilmModel.topname = filmModel.name;
+        FilmChatChatDetailViewController * FilmDetailVc = [[FilmChatChatDetailViewController alloc]init];
+        FilmDetailVc.hidesBottomBarWhenPushed = YES;
+        FilmDetailVc.listModel = myfilmModel;
+        [self.navigationController pushViewController:FilmDetailVc animated:YES];
     }else if (btnIndex == 1){
         
         FilmZoneJbaoController * FilmWseVc = [[FilmZoneJbaoController alloc]init];

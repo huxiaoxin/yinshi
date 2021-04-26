@@ -23,13 +23,22 @@
         NSArray * btnTitleArr = @[@"系统消息",@"点赞通知",@"评论通知"];
         for (int index = 0; index < btnTitleArr.count; index ++) {
             FilmFactoryBtn * filmBtn = [[FilmFactoryBtn alloc]initWithFrame:CGRectMake(CGRectGetWidth(header.frame)/btnTitleArr.count*index, K(10), CGRectGetWidth(header.frame)/btnTitleArr.count, K(80))];
-            filmBtn.FilmFacotyImgView.image = [UIImage imageNamed:btnTitleArr[index]];
+            NSString * Str = btnTitleArr[index];
+            if ([Str isEqual:@"系统消息"]) {
+                Str = @"xitongtongzhi";
+            }
+            UIImage  * img = [UIImage imageNamed:Str];
+            filmBtn.FilmFacotyImgView.image = img;
             filmBtn.FilmFacotrylb.text = btnTitleArr[index];
             filmBtn.tag = index;
+            [filmBtn addTarget:self action:@selector(filmBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             [header addSubview:filmBtn];
         }
         
     }
     return self;
+}
+-(void)filmBtnClick:(FilmFactoryBtn *)filmBtn{
+    [self.delegate FilmFactoryMsgHeaderViewBtnClickWithbtnIndex:filmBtn.tag];
 }
 @end

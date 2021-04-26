@@ -10,11 +10,140 @@
 #import "FilmFactoryZoneModel.h"
 #import <WHC_ModelSqliteKit-umbrella.h>
 #import "FilmFactoryComentModel.h"
+#import "FilmChatMsgListModel.h"
+#import "FilmChatDetailMoel.h"
 @implementation AppDelegate (FilmMySafeApp)
 +(void)load{
     [self FilmFactortLoactionModelConfig];
     [self FilmFactoryZoneModelConfig];
     [self FilmFactoryComentModelConfig];
+    [self XiaoxinMsgListModelConfig];
+    [self XYZLikeChatDetailMdoelConfig];
+}
++(void)XYZLikeChatDetailMdoelConfig{
+    NSMutableArray * tempArr =[NSMutableArray array];
+    FilmChatDetailMoel * FilmDetail = [[FilmChatDetailMoel alloc]init];
+    FilmDetail.msgname = @"楼主，你这个缩印真心做的很牛逼呀";
+    FilmDetail.userID = 0;
+    FilmDetail.imgUrl = @"https://img2.doubanio.com/icon/up230533267-3.jpg";
+    FilmDetail.msgisMe = YES;
+    [tempArr addObject:FilmDetail];
+    
+    FilmChatDetailMoel * FilmDetail1 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail1.msgname = @"是吧，我自己也觉得很不错呢，😁，有没有很崇拜我";
+    FilmDetail1.userID = 0;
+    FilmDetail1.imgUrl = @"https://img2.doubanio.com/icon/up230533267-3.jpg";
+    FilmDetail1.msgisMe = NO;
+    [tempArr addObject:FilmDetail1];
+    
+    FilmChatDetailMoel * FilmDetail2 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail2.msgname = @"在下属实很崇拜你呢～😹😹😹";
+    FilmDetail2.userID = 0;
+    FilmDetail2.imgUrl = @"";
+    FilmDetail2.msgisMe = YES;
+    [tempArr addObject:FilmDetail2];
+    
+    
+    FilmChatDetailMoel * FilmDetail3 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail3.msgname = @"哈哈哈哈哈哈哈哈哈但凡lz能花干这个十分之一的心思背课文还至于默写不出吗🐒";
+    FilmDetail3.userID = 1;
+    FilmDetail3.imgUrl = @"https://img3.doubanio.com/icon/u214879397-1.jpg";
+    FilmDetail3.msgisMe = YES;
+    [tempArr addObject:FilmDetail3];
+    
+    
+    FilmChatDetailMoel * FilmDetail4 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail4.msgname = @"我确实在背诵呀，只是这脑子不好使，动不动忘记了";
+    FilmDetail4.userID = 1;
+    FilmDetail4.imgUrl = @"https://img3.doubanio.com/icon/u214879397-1.jpg";
+    FilmDetail4.msgisMe = NO;
+    [tempArr addObject:FilmDetail4];
+    
+    FilmChatDetailMoel * FilmDetail5 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail5.msgname = @"当我们谈论电影时，“催泪”似乎是有些廉价，甚至略带贬义的形容词";
+    FilmDetail5.userID = 2;
+    FilmDetail5.imgUrl = @"https://img2.doubanio.com/icon/u68319765-2.jpg";
+    FilmDetail5.msgisMe = YES;
+    [tempArr addObject:FilmDetail5];
+    
+    FilmChatDetailMoel * FilmDetail6 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail6.msgname = @"我并不觉得廉价哦，是否廉价取决于自己的生活态度，谢谢";
+    FilmDetail6.userID = 2;
+    FilmDetail6.imgUrl = @"https://img2.doubanio.com/icon/u68319765-2.jpg";
+    FilmDetail6.msgisMe = NO;
+    [tempArr addObject:FilmDetail6];
+    
+        FilmChatDetailMoel * FilmDetail7 = [[FilmChatDetailMoel alloc]init];
+    FilmDetail7.msgname = @"楼主你自己 有感同深受过吗？";
+    FilmDetail7.userID = 3;
+    FilmDetail7.imgUrl = @"https://img9.doubanio.com/icon/u139444387-5.jpg";
+    FilmDetail7.msgisMe = YES;
+        [tempArr addObject:FilmDetail7];
+    
+
+    BOOL FilmDetailSucced = [[NSUserDefaults standardUserDefaults] boolForKey:@"FilmDetail"];
+    if (FilmDetailSucced == NO) {
+        BOOL FilmDetailSuccedStatus = [WHC_ModelSqlite inserts:tempArr.copy];
+        [[NSUserDefaults standardUserDefaults] setBool:FilmDetailSuccedStatus forKey:@"FilmDetail"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+    }
+}
++(void)XiaoxinMsgListModelConfig{
+    NSMutableArray * tempArr =[NSMutableArray array];
+    FilmChatMsgListModel * listModel = [[FilmChatMsgListModel alloc]init];
+    listModel.imgurl = @"https://img2.doubanio.com/icon/up230533267-3.jpg";
+    listModel.topname = @"犄角掉了";
+    listModel.content = @"楼主，你这个缩印真心做的很牛逼呀";
+    listModel.time = @"12:34:19";
+    listModel.ChatID = 0;
+    listModel.redNum = 1;
+    listModel.isShowRed = YES;
+    [tempArr addObject:listModel];
+    
+    
+    FilmChatMsgListModel * listModel1 = [[FilmChatMsgListModel alloc]init];
+    listModel1.imgurl = @"https://img3.doubanio.com/icon/u214879397-1.jpg";
+    listModel1.topname = @"pharmaceutical";
+    listModel1.content = @"哈哈哈哈哈哈哈哈哈但凡lz能花干这个十分之一的心思背课文还至于默写不出吗🐒";
+    listModel1.time = @"2021-04-26 09:21:13";
+    listModel1.ChatID = 1;
+    listModel1.redNum = 1;
+    listModel1.isShowRed = YES;
+    [tempArr addObject:listModel1];
+    
+    
+    
+    
+    
+    
+    
+    FilmChatMsgListModel * listModel2 = [[FilmChatMsgListModel alloc]init];
+    listModel2.imgurl = @"https://img2.doubanio.com/icon/u68319765-2.jpg";
+    listModel2.topname = @"阿达 ";
+    listModel2.content = @"我并不觉得廉价哦，是否廉价取决于自己的生活态度，谢谢";
+    listModel2.time = @"周三";
+    listModel2.ChatID = 2;
+    [tempArr addObject:listModel2];
+
+    
+    FilmChatMsgListModel * listModel3 = [[FilmChatMsgListModel alloc]init];
+    listModel3.imgurl = @"https://img9.doubanio.com/icon/u139444387-5.jpg";
+    listModel3.topname = @"深焦DeepFocus ";
+    listModel3.content = @"楼主你自己 有感同深受过吗？";
+    listModel3.time = @"周一";
+    listModel3.ChatID = 3;
+    [tempArr addObject:listModel3];
+
+    
+    
+    BOOL FilmmsgSucced = [[NSUserDefaults standardUserDefaults] boolForKey:@"FilmZoneMsgList"];
+    if (FilmmsgSucced == NO) {
+        BOOL FilmMsgStatus = [WHC_ModelSqlite inserts:tempArr.copy];
+        [[NSUserDefaults standardUserDefaults] setBool:FilmMsgStatus forKey:@"FilmZoneMsgList"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
+    }
 }
 +(void)FilmFactoryZoneModelConfig{
     NSMutableArray * tempArr = [NSMutableArray array];

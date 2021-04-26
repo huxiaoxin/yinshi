@@ -42,6 +42,7 @@
             homeBtn.FilmTopImgView.image = [UIImage imageNamed:btnArr[index]];
             homeBtn.FilmBtomlb.text = btnArr[index];
             homeBtn.tag = index;
+            [homeBtn addTarget:self action:@selector(homeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
             [btnView addSubview:homeBtn];
         }
         
@@ -141,5 +142,8 @@
 #pragma mark--SDCycleScrollViewDelegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     [self.delegate FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:index];
+}
+-(void)homeBtnClick:(FilmFactoryHomeBtn *)filmbtn{
+    
 }
 @end

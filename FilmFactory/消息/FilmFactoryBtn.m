@@ -18,7 +18,7 @@
 - (UIImageView *)FilmFacotyImgView{
     if (!_FilmFacotyImgView) {
         _FilmFacotyImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
-        _FilmFacotyImgView.backgroundColor = LGDLightGaryColor;
+//        _FilmFacotyImgView.backgroundColor = LGDLightGaryColor;
     }
     return _FilmFacotyImgView;
 }
