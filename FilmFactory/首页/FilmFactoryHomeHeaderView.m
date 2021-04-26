@@ -135,15 +135,16 @@
     return _Filmbanar;
 }
 - (NSArray *)kj_setDatasBannerView:(KJBannerView *)banner{
-    return @[@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2F01.minipic.eastday.com%2F20171211%2F20171211185710_66c75b95e5421bbc73d255836976d21d_5.jpeg&refer=http%3A%2F%2F01.minipic.eastday.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1621562150&t=4295d134064e3ebd11f6a82c581b6d44",@"https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2254925766,233962270&fm=224&gp=0.jpg"];
+    return @[@"https://img.zcool.cn/community/01082b5d66845ba80120526d6f6394.jpg@1280w_1l_2o_100sh.jpg",@"https://image11.m1905.cn/uploadfile/2021/0421/20210421100904690123.jpg"];
 }
 - (void)kj_BannerView:(KJBannerView *)banner SelectIndex:(NSInteger)index{
+    [self.delegate FilmFactoryHomeHeaderViewWithTopBanarIndex:index];
 }
 #pragma mark--SDCycleScrollViewDelegate
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
     [self.delegate FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:index];
 }
 -(void)homeBtnClick:(FilmFactoryHomeBtn *)filmbtn{
-    
+    [self.delegate FilmFactoryHomeHeaderViewBtnClickIndex:filmbtn.tag];
 }
 @end

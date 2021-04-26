@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A191F2326370658005550C8 /* WWStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A191F2226370658005550C8 /* WWStarView.m */; };
+		4A191F29263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A191F28263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m */; };
 		4A48FEB7262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48FEB6262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m */; };
 		4A48FEBD262F159300D219D5 /* FilmFactoryBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48FEBC262F159300D219D5 /* FilmFactoryBtn.m */; };
 		4A48FEC3262F16E900D219D5 /* UIView+shadowPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A48FEC1262F16E900D219D5 /* UIView+shadowPath.m */; };
@@ -28,6 +30,12 @@
 		4AEE2C222635AB4100B2BC43 /* FilmZoneJubaoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE2C1E2635AB3F00B2BC43 /* FilmZoneJubaoModel.m */; };
 		4AEE2C232635AB4100B2BC43 /* FilmZoneJubaoTableviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE2C1F2635AB4000B2BC43 /* FilmZoneJubaoTableviewCell.m */; };
 		4AEE2C242635AB4100B2BC43 /* FilmZoneJbaoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEE2C212635AB4100B2BC43 /* FilmZoneJbaoController.m */; };
+		4AEFAE2F2636F697001954F1 /* ShuyunHomeNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFAE2E2636F697001954F1 /* ShuyunHomeNewsModel.m */; };
+		4AEFAE352636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFAE332636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m */; };
+		4AEFAE3A2636F7D8001954F1 /* city.json in Resources */ = {isa = PBXBuildFile; fileRef = 4AEFAE392636F7D8001954F1 /* city.json */; };
+		4AEFAE402636FA81001954F1 /* FilmFactorynewsDetialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFAE3F2636FA81001954F1 /* FilmFactorynewsDetialViewController.m */; };
+		4AEFAE47263701B3001954F1 /* FilmFacotryShangyinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFAE46263701B3001954F1 /* FilmFacotryShangyinViewController.m */; };
+		4AEFAE4D26370342001954F1 /* FilmFacotryShangyinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AEFAE4C26370342001954F1 /* FilmFacotryShangyinTableViewCell.m */; };
 		8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF7EF262EAF73001618BD /* AppDelegate.m */; };
 		8A3EF7F6262EAF73001618BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3EF7F5262EAF73001618BD /* ViewController.m */; };
 		8A3EF7F9262EAF73001618BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A3EF7F7262EAF73001618BD /* Main.storyboard */; };
@@ -108,6 +116,10 @@
 
 /* Begin PBXFileReference section */
 		18116D595DADAB36A75DFE60 /* Pods-FilmFactory.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmFactory.release.xcconfig"; path = "Target Support Files/Pods-FilmFactory/Pods-FilmFactory.release.xcconfig"; sourceTree = "<group>"; };
+		4A191F2126370657005550C8 /* WWStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWStarView.h; sourceTree = "<group>"; };
+		4A191F2226370658005550C8 /* WWStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWStarView.m; sourceTree = "<group>"; };
+		4A191F27263708D7005550C8 /* FilmFacotryShangyingDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryShangyingDetailViewController.h; sourceTree = "<group>"; };
+		4A191F28263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryShangyingDetailViewController.m; sourceTree = "<group>"; };
 		4A48FEB5262F0E6000D219D5 /* FilmFactoryMsgHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryMsgHeaderView.h; sourceTree = "<group>"; };
 		4A48FEB6262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryMsgHeaderView.m; sourceTree = "<group>"; };
 		4A48FEBB262F159300D219D5 /* FilmFactoryBtn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryBtn.h; sourceTree = "<group>"; };
@@ -150,6 +162,17 @@
 		4AEE2C1F2635AB4000B2BC43 /* FilmZoneJubaoTableviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmZoneJubaoTableviewCell.m; sourceTree = "<group>"; };
 		4AEE2C202635AB4000B2BC43 /* FilmZoneJubaoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FilmZoneJubaoModel.h; sourceTree = "<group>"; };
 		4AEE2C212635AB4100B2BC43 /* FilmZoneJbaoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FilmZoneJbaoController.m; sourceTree = "<group>"; };
+		4AEFAE2D2636F697001954F1 /* ShuyunHomeNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuyunHomeNewsModel.h; sourceTree = "<group>"; };
+		4AEFAE2E2636F697001954F1 /* ShuyunHomeNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuyunHomeNewsModel.m; sourceTree = "<group>"; };
+		4AEFAE332636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShuyunHomeNewsTableViewCell.m; sourceTree = "<group>"; };
+		4AEFAE342636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShuyunHomeNewsTableViewCell.h; sourceTree = "<group>"; };
+		4AEFAE392636F7D8001954F1 /* city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = city.json; sourceTree = "<group>"; };
+		4AEFAE3E2636FA81001954F1 /* FilmFactorynewsDetialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorynewsDetialViewController.h; sourceTree = "<group>"; };
+		4AEFAE3F2636FA81001954F1 /* FilmFactorynewsDetialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorynewsDetialViewController.m; sourceTree = "<group>"; };
+		4AEFAE45263701B3001954F1 /* FilmFacotryShangyinViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryShangyinViewController.h; sourceTree = "<group>"; };
+		4AEFAE46263701B3001954F1 /* FilmFacotryShangyinViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryShangyinViewController.m; sourceTree = "<group>"; };
+		4AEFAE4B26370342001954F1 /* FilmFacotryShangyinTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryShangyinTableViewCell.h; sourceTree = "<group>"; };
+		4AEFAE4C26370342001954F1 /* FilmFacotryShangyinTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryShangyinTableViewCell.m; sourceTree = "<group>"; };
 		8A3EF7EB262EAF73001618BD /* FilmFactory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmFactory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3EF7EE262EAF73001618BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8A3EF7EF262EAF73001618BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -323,6 +346,19 @@
 			path = "举报";
 			sourceTree = "<group>";
 		};
+		4AEFAE44263701A1001954F1 /* 影视上映 */ = {
+			isa = PBXGroup;
+			children = (
+				4AEFAE45263701B3001954F1 /* FilmFacotryShangyinViewController.h */,
+				4AEFAE46263701B3001954F1 /* FilmFacotryShangyinViewController.m */,
+				4AEFAE4B26370342001954F1 /* FilmFacotryShangyinTableViewCell.h */,
+				4AEFAE4C26370342001954F1 /* FilmFacotryShangyinTableViewCell.m */,
+				4A191F27263708D7005550C8 /* FilmFacotryShangyingDetailViewController.h */,
+				4A191F28263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m */,
+			);
+			path = "影视上映";
+			sourceTree = "<group>";
+		};
 		59E2734F7D14409E1BF6F232 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +440,7 @@
 		8A3EF850262EB2CA001618BD /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				4AEFAE44263701A1001954F1 /* 影视上映 */,
 				8A54C4E426366CB0008E3A6B /* 影视资讯 */,
 				8A91B79C26326577006A3EC1 /* 首页详情 */,
 				8A72B6B02630024B00582123 /* 更多 */,
@@ -482,6 +519,8 @@
 		8A3EF854262EB2F8001618BD /* 工具 */ = {
 			isa = PBXGroup;
 			children = (
+				4A191F2126370657005550C8 /* WWStarView.h */,
+				4A191F2226370658005550C8 /* WWStarView.m */,
 				4AE8DC342635686500D9A0FB /* LMJHorizontalScrollText.h */,
 				4AE8DC352635686600D9A0FB /* LMJHorizontalScrollText.m */,
 				4A48FEC2262F16E900D219D5 /* UIView+shadowPath.h */,
@@ -555,8 +594,15 @@
 		8A54C4E426366CB0008E3A6B /* 影视资讯 */ = {
 			isa = PBXGroup;
 			children = (
+				4AEFAE392636F7D8001954F1 /* city.json */,
 				8A54C4E526366CC0008E3A6B /* FilmFactoryNewsViewController.h */,
 				8A54C4E626366CC0008E3A6B /* FilmFactoryNewsViewController.m */,
+				4AEFAE2D2636F697001954F1 /* ShuyunHomeNewsModel.h */,
+				4AEFAE2E2636F697001954F1 /* ShuyunHomeNewsModel.m */,
+				4AEFAE342636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.h */,
+				4AEFAE332636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m */,
+				4AEFAE3E2636FA81001954F1 /* FilmFactorynewsDetialViewController.h */,
+				4AEFAE3F2636FA81001954F1 /* FilmFactorynewsDetialViewController.m */,
 			);
 			path = "影视资讯";
 			sourceTree = "<group>";
@@ -778,6 +824,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A3EF7FE262EAF75001618BD /* LaunchScreen.storyboard in Resources */,
+				4AEFAE3A2636F7D8001954F1 /* city.json in Resources */,
 				8A3EF7FB262EAF75001618BD /* Assets.xcassets in Resources */,
 				8A3EF7F9262EAF73001618BD /* Main.storyboard in Resources */,
 				8A91B83D2632A085006A3EC1 /* FilmFactory.html in Resources */,
@@ -870,6 +917,7 @@
 				8A54C4D926366912008E3A6B /* FilmChatZoneChatDetailToolsView.m in Sources */,
 				8A3EF7F0262EAF73001618BD /* AppDelegate.m in Sources */,
 				4AEE2C242635AB4100B2BC43 /* FilmZoneJbaoController.m in Sources */,
+				4AEFAE4D26370342001954F1 /* FilmFacotryShangyinTableViewCell.m in Sources */,
 				8A3EF865262EB321001618BD /* UILabel+CDGPSpaceLb.m in Sources */,
 				8A54C502263680E0008E3A6B /* FilmFActorySendZoneConroller.m in Sources */,
 				8A91B7A526326620006A3EC1 /* FilmFacoryHomeDetailHeader.m in Sources */,
@@ -877,9 +925,13 @@
 				4AE8DBE62635210100D9A0FB /* AppDelegate+FilmMySafeApp.m in Sources */,
 				8A3EF801262EAF75001618BD /* main.m in Sources */,
 				8A72B652262FB44400582123 /* FilmFacroyHomeTableViewCell.m in Sources */,
+				4A191F29263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m in Sources */,
 				8A91B86F2632A9DD006A3EC1 /* FilmFacorrLoactoinDetailViewController.m in Sources */,
 				8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */,
+				4AEFAE352636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m in Sources */,
+				4AEFAE47263701B3001954F1 /* FilmFacotryShangyinViewController.m in Sources */,
 				4AE8DC1826355E6C00D9A0FB /* FilmFacorryZoneDetailheader.m in Sources */,
+				4A191F2326370658005550C8 /* WWStarView.m in Sources */,
 				8A72B6AC262FF41500582123 /* FilmFactoryLoactionTableViewCell.m in Sources */,
 				8A54C4D726366912008E3A6B /* FilmChatDetailMoel.m in Sources */,
 				8A54C4AF26364A95008E3A6B /* FilmFactroysysTemViewController.m in Sources */,
@@ -900,6 +952,7 @@
 				8A91B81326329C90006A3EC1 /* FilmFacotroySugestionTableCell.m in Sources */,
 				8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */,
 				4A48FEB7262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m in Sources */,
+				4AEFAE2F2636F697001954F1 /* ShuyunHomeNewsModel.m in Sources */,
 				8A3EF866262EB321001618BD /* UIViewController+IOS13.m in Sources */,
 				8A91B7AB263268D6006A3EC1 /* FilmacroryMineTableViewCell.m in Sources */,
 				8A54C4E726366CC0008E3A6B /* FilmFactoryNewsViewController.m in Sources */,
@@ -912,6 +965,7 @@
 				4AEE2C222635AB4100B2BC43 /* FilmZoneJubaoModel.m in Sources */,
 				8A91B81226329C90006A3EC1 /* FilmFactoryModel.m in Sources */,
 				8A54C4CA263666E4008E3A6B /* FilmFacotrysystemDetailViewController.m in Sources */,
+				4AEFAE402636FA81001954F1 /* FilmFactorynewsDetialViewController.m in Sources */,
 				4A48FEC9262F19CC00D219D5 /* FilmFacotryMsgTableViewCell.m in Sources */,
 				4AEE2C232635AB4100B2BC43 /* FilmZoneJubaoTableviewCell.m in Sources */,
 				4AE8DC08263550FB00D9A0FB /* FilmFactoryComentModel.m in Sources */,

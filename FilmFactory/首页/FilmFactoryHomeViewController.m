@@ -11,6 +11,10 @@
 #import "FilmFactorHomeMoreViewController.h"
 #import "FilmFacroryHomeDetailViewController.h"
 #import <AVKit/AVKit.h>
+#import "FilmFactoryNewsViewController.h"
+#import "FilmFactortLoactionModel.h"
+#import "FilmFacorrLoactoinDetailViewController.h"
+#import "FilmFacotryShangyinViewController.h"
 @interface FilmFactoryHomeViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFactoryHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
 @property(nonatomic,strong) FilmFactoryHomeHeaderView * FilmHeader;
@@ -92,6 +96,35 @@
     AVPlayerViewController *ctrl = [[AVPlayerViewController alloc] init];
     ctrl.player= [[AVPlayer alloc]initWithURL:url];
     [self presentViewController:ctrl animated:YES completion:nil];
+}
+-(void)FilmFactoryHomeHeaderViewWithTopBanarIndex:(NSInteger)topBanarIndex{
+    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactortLoactionModel class]];
+    FilmFacorrLoactoinDetailViewController  * locationDetaioVc  = [[FilmFacorrLoactoinDetailViewController alloc]init];
+    locationDetaioVc.hidesBottomBarWhenPushed = YES;
+    locationDetaioVc.filmLoactionModel = dataArr.firstObject;
+    [self.navigationController pushViewController:locationDetaioVc animated:YES];
+}
+-(void)FilmFactoryHomeHeaderViewBtnClickIndex:(NSInteger)btnIndex{
+    if (btnIndex == 0) {
+        FilmFacotryShangyinViewController * FactoryVc = [[FilmFacotryShangyinViewController alloc]init];
+        FactoryVc.FilmIndex = btnIndex;
+        FactoryVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FactoryVc animated:YES];
+    }else if (btnIndex == 1){
+        FilmFacotryShangyinViewController * FactoryVc = [[FilmFacotryShangyinViewController alloc]init];
+        FactoryVc.FilmIndex = btnIndex;
+        FactoryVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FactoryVc animated:YES];
+    }else if (btnIndex == 2){
+        FilmFacotryShangyinViewController * FactoryVc = [[FilmFacotryShangyinViewController alloc]init];
+        FactoryVc.FilmIndex = btnIndex;
+        FactoryVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FactoryVc animated:YES];
+    }else if (btnIndex == 3){
+        FilmFactoryNewsViewController * FilmFacctoryVc = [[FilmFactoryNewsViewController alloc]init];
+        FilmFacctoryVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FilmFacctoryVc animated:YES];
+    }
 }
 -(void)FilmFactoryHeaderClicks{
     
