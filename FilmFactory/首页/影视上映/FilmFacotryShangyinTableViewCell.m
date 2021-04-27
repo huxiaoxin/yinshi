@@ -55,7 +55,7 @@
         [self.contentView addSubview:FilmStarview];
         FilmStarview.currentStar = 4.0f;
         
-        UIButton * FilmWatchBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width-K(60), CGRectGetMaxY(FilmDeeplb.frame)+K(10), K(50), K(20))];
+        UIButton * FilmWatchBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width-K(60), CGRectGetMaxY(FilmDeeplb.frame)+K(8), K(50), K(20))];
         FilmWatchBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         [FilmWatchBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         FilmWatchBtn.titleLabel.font =[UIFont systemFontOfSize:12];
@@ -67,5 +67,12 @@
 
     }
     return self;
+}
+- (void)setFilmHomeModel:(FilmFacotryHomeModel *)filmHomeModel{
+    _filmHomeModel = filmHomeModel;
+    [_FilmThubImgView sd_setImageWithURL:[NSURL URLWithString:filmHomeModel.imgTubUrl]];
+    _FilmToptitle.text = filmHomeModel.famous;
+    _FilmCenterlb.text =  filmHomeModel.articlList;
+    NSLog(@"articlList==%@",filmHomeModel.articlList);
 }
 @end

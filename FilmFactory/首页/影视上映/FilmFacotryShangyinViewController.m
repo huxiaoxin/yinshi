@@ -8,6 +8,7 @@
 #import "FilmFacotryShangyinViewController.h"
 #import "FilmFacotryShangyinTableViewCell.h"
 #import "FilmFacotryShangyingDetailViewController.h"
+#import "FilmFacotryHomeModel.h"
 @interface FilmFacotryShangyinViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView * FilmFacotryTableView;
 @property(nonatomic,strong) NSMutableArray * FilmFacotryDataArr;
@@ -15,12 +16,18 @@
 
 @implementation FilmFacotryShangyinViewController
 
+-(NSMutableArray *)FilmFacotryDataArr{
+    if (!_FilmFacotryDataArr) {
+        _FilmFacotryDataArr = [NSMutableArray array];
+    }
+    return _FilmFacotryDataArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (self.FilmIndex == 0) {
-        self.gk_navTitle = @"橙子好片";
+        self.gk_navTitle = @"企鹅好片";
     }else if (self.FilmIndex == 1){
-        self.gk_navTitle = @"悬疑恐怖";
+        self.gk_navTitle = @"环球新片";
     }else if (self.FilmIndex == 2){
         self.gk_navTitle = @"即将上映";
     }
@@ -43,7 +50,7 @@
     return _FilmFacotryTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.FilmFacotryDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * FilmFacotryIdentifer = @"FilmFacotryShangyinTableViewCell";
@@ -51,19 +58,27 @@
     if (FilmmFacoreyCell == nil ) {
         FilmmFacoreyCell = [[FilmFacotryShangyinTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFacotryIdentifer];
     }
+    FilmmFacoreyCell.filmHomeModel = self.FilmFacotryDataArr[indexPath.row];
     return FilmmFacoreyCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return K(110);
+    return K(120);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     FilmFacotryShangyingDetailViewController * FilmShanyinVc = [[FilmFacotryShangyingDetailViewController alloc]init];
     FilmShanyinVc.hidesBottomBarWhenPushed = YES;
+    FilmShanyinVc.filmHomeMode = self.FilmFacotryDataArr[indexPath.row];
     [self.navigationController pushViewController:FilmShanyinVc animated:YES];
 }
 -(void)FilmFacotryHeaderClicks{
+    NSArray * dataArr =[WHC_ModelSqlite query:[FilmFacotryHomeModel class] where:[NSString stringWithFormat:@"Top_filmType ='%ld'",self.FilmIndex]];
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (weakSelf.FilmFacotryDataArr.count > 0) {
+            [weakSelf.FilmFacotryDataArr removeAllObjects];
+        }
+        weakSelf.FilmFacotryDataArr = dataArr.mutableCopy;
+        [weakSelf.FilmFacotryTableView reloadData];
         [weakSelf.FilmFacotryTableView.mj_header endRefreshing];
     });
 }

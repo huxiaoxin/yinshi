@@ -64,7 +64,7 @@
         attment.image = [UIImage imageNamed:@"hongdian"];
         attment.bounds = CGRectMake(0, 0, K(10), K(10));
         NSAttributedString * Attbute = [NSAttributedString attributedStringWithAttachment:attment];
-        NSString  * TottalTitleStr = @"  关于5月3号橙子影视工厂维护公告";
+        NSString  * TottalTitleStr = @"  关于5月3号企鹅追剧维护公告";
         NSMutableAttributedString * Attmuteble = [[NSMutableAttributedString alloc]initWithString:TottalTitleStr];
         [Attmuteble insertAttributedString:Attbute atIndex:0];
         _FilmFactroyTopTitle.attributedText = Attmuteble;
@@ -77,7 +77,7 @@
         _FilmFactryDetailb.font = [UIFont systemFontOfSize:12];
         _FilmFactryDetailb.numberOfLines = 0;
         _FilmFactryDetailb.textColor =  LGDBLackColor;
-        _FilmFactryDetailb.text = @"尊敬的用户，您好～！\n因服务器升级需要，橙子影视工厂将于2021年5月3号服务器停机进行升级，届时app将无法访问大概有半个小时左右，还请大家稍安伪造等待一下，感谢各位的配合与支持，谢谢～";
+        _FilmFactryDetailb.text = @"尊敬的用户，您好～！\n因服务器升级需要，企鹅追剧将于2021年5月3号服务器停机进行升级，届时app将无法访问大概有半个小时左右，还请大家稍安伪造等待一下，感谢各位的配合与支持，谢谢～";
     }
     return _FilmFactryDetailb;
 }

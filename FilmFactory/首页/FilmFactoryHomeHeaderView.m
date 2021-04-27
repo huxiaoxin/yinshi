@@ -36,7 +36,7 @@
         [self addSubview:btnView];
         [btnView viewShadowPathWithColor:LGDLightGaryColor shadowOpacity:0.8 shadowRadius:5 shadowPathType:LeShadowPathAround shadowPathWidth:5];
         
-        NSArray  * btnArr = @[@"橙子好片",@"恐怖悬疑",@"即将上映",@"影视资讯"];
+        NSArray  * btnArr = @[@"企鹅好片",@"环球新片",@"即将上映",@"影视资讯"];
         for (int index = 0; index < btnArr.count; index ++) {
             FilmFactoryHomeBtn * homeBtn = [[FilmFactoryHomeBtn alloc]initWithFrame:CGRectMake(CGRectGetWidth(btnView.frame)/btnArr.count*index, K(10), CGRectGetWidth(btnView.frame)/btnArr.count, K(60))];
             homeBtn.FilmTopImgView.image = [UIImage imageNamed:btnArr[index]];
@@ -72,7 +72,7 @@
         attchment.bounds  = CGRectMake(0, -5, K(25), K(25));
         
         NSAttributedString * attbute =[NSAttributedString attributedStringWithAttachment:attchment];
-        NSMutableAttributedString * mutablAtt = [[NSMutableAttributedString alloc]initWithString:@"橙子推荐"];
+        NSMutableAttributedString * mutablAtt = [[NSMutableAttributedString alloc]initWithString:@"企鹅追剧"];
         [mutablAtt addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:18] range:NSMakeRange(0, 4)];
         [mutablAtt addAttribute:NSForegroundColorAttributeName value:LGDBLackColor range:NSMakeRange(0, 1)];
         [mutablAtt addAttribute:NSForegroundColorAttributeName value:LGDMianColor range:NSMakeRange(1, 1)];

@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle =  @"橙子影视工厂";
+    self.gk_navTitle =  @"企鹅追剧";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.FilmFactoryTableView];
     _FilmFactoryTableView.tableHeaderView =  self.FilmHeader;
@@ -98,11 +98,14 @@
     [self presentViewController:ctrl animated:YES completion:nil];
 }
 -(void)FilmFactoryHomeHeaderViewWithTopBanarIndex:(NSInteger)topBanarIndex{
-    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactortLoactionModel class]];
-    FilmFacorrLoactoinDetailViewController  * locationDetaioVc  = [[FilmFacorrLoactoinDetailViewController alloc]init];
-    locationDetaioVc.hidesBottomBarWhenPushed = YES;
-    locationDetaioVc.filmLoactionModel = dataArr.firstObject;
-    [self.navigationController pushViewController:locationDetaioVc animated:YES];
+    if (topBanarIndex == 1) {
+        NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactortLoactionModel class]];
+        NSLog(@"-------%ld",dataArr.count);
+        FilmFacorrLoactoinDetailViewController  * locationDetaioVc  = [[FilmFacorrLoactoinDetailViewController alloc]init];
+        locationDetaioVc.hidesBottomBarWhenPushed = YES;
+        locationDetaioVc.filmLoactionModel = dataArr.firstObject;
+        [self.navigationController pushViewController:locationDetaioVc animated:YES];
+    }
 }
 -(void)FilmFactoryHomeHeaderViewBtnClickIndex:(NSInteger)btnIndex{
     if (btnIndex == 0) {

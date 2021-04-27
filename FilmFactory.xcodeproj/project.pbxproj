@@ -94,6 +94,11 @@
 		8A91B8662632A6DB006A3EC1 /* FilmFactoryChangeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91B8652632A6DB006A3EC1 /* FilmFactoryChangeInfoViewController.m */; };
 		8A91B86F2632A9DD006A3EC1 /* FilmFacorrLoactoinDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91B86E2632A9DD006A3EC1 /* FilmFacorrLoactoinDetailViewController.m */; };
 		8A91B8752632AAFA006A3EC1 /* FilmFactorLoacitonTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91B8742632AAFA006A3EC1 /* FilmFactorLoacitonTypeTableViewCell.m */; };
+		8AAF728826379A600002D80C /* FilmFacotryShangyinDetailHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF728726379A600002D80C /* FilmFacotryShangyinDetailHeader.m */; };
+		8AAF728E2637A3550002D80C /* FilmFacoreyCoinView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF728D2637A3550002D80C /* FilmFacoreyCoinView.m */; };
+		8AAF72942637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF72932637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.m */; };
+		8AAF729A2637BD390002D80C /* FilmFacotryHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF72992637BD390002D80C /* FilmFacotryHomeModel.m */; };
+		8AAF72A02637F21C0002D80C /* FilmFactoryShangyinModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AAF729F2637F21C0002D80C /* FilmFactoryShangyinModel.m */; };
 		DFA9BFE950DB437D2EE1B717 /* Pods_FilmFactory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */; };
 /* End PBXBuildFile section */
 
@@ -290,6 +295,16 @@
 		8A91B86E2632A9DD006A3EC1 /* FilmFacorrLoactoinDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacorrLoactoinDetailViewController.m; sourceTree = "<group>"; };
 		8A91B8732632AAFA006A3EC1 /* FilmFactorLoacitonTypeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactorLoacitonTypeTableViewCell.h; sourceTree = "<group>"; };
 		8A91B8742632AAFA006A3EC1 /* FilmFactorLoacitonTypeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactorLoacitonTypeTableViewCell.m; sourceTree = "<group>"; };
+		8AAF728626379A600002D80C /* FilmFacotryShangyinDetailHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryShangyinDetailHeader.h; sourceTree = "<group>"; };
+		8AAF728726379A600002D80C /* FilmFacotryShangyinDetailHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryShangyinDetailHeader.m; sourceTree = "<group>"; };
+		8AAF728C2637A3550002D80C /* FilmFacoreyCoinView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacoreyCoinView.h; sourceTree = "<group>"; };
+		8AAF728D2637A3550002D80C /* FilmFacoreyCoinView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacoreyCoinView.m; sourceTree = "<group>"; };
+		8AAF72922637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryArticlCollectionViewCell.h; sourceTree = "<group>"; };
+		8AAF72932637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryArticlCollectionViewCell.m; sourceTree = "<group>"; };
+		8AAF72982637BD390002D80C /* FilmFacotryHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFacotryHomeModel.h; sourceTree = "<group>"; };
+		8AAF72992637BD390002D80C /* FilmFacotryHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFacotryHomeModel.m; sourceTree = "<group>"; };
+		8AAF729E2637F21C0002D80C /* FilmFactoryShangyinModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilmFactoryShangyinModel.h; sourceTree = "<group>"; };
+		8AAF729F2637F21C0002D80C /* FilmFactoryShangyinModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilmFactoryShangyinModel.m; sourceTree = "<group>"; };
 		D3870E69F16227DF6709ADAF /* Pods_FilmFactory.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmFactory.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6465A50B198E61C2023CE37 /* Pods-FilmFactory.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmFactory.debug.xcconfig"; path = "Target Support Files/Pods-FilmFactory/Pods-FilmFactory.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -355,6 +370,14 @@
 				4AEFAE4C26370342001954F1 /* FilmFacotryShangyinTableViewCell.m */,
 				4A191F27263708D7005550C8 /* FilmFacotryShangyingDetailViewController.h */,
 				4A191F28263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m */,
+				8AAF728626379A600002D80C /* FilmFacotryShangyinDetailHeader.h */,
+				8AAF728726379A600002D80C /* FilmFacotryShangyinDetailHeader.m */,
+				8AAF72922637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.h */,
+				8AAF72932637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.m */,
+				8AAF728C2637A3550002D80C /* FilmFacoreyCoinView.h */,
+				8AAF728D2637A3550002D80C /* FilmFacoreyCoinView.m */,
+				8AAF729E2637F21C0002D80C /* FilmFactoryShangyinModel.h */,
+				8AAF729F2637F21C0002D80C /* FilmFactoryShangyinModel.m */,
 			);
 			path = "影视上映";
 			sourceTree = "<group>";
@@ -454,6 +477,8 @@
 				8A72B683262FBF4700582123 /* FilmFactoryMovieView.m */,
 				8A72B688262FC38800582123 /* FilmFactoryHomeBtn.h */,
 				8A72B689262FC38800582123 /* FilmFactoryHomeBtn.m */,
+				8AAF72982637BD390002D80C /* FilmFacotryHomeModel.h */,
+				8AAF72992637BD390002D80C /* FilmFacotryHomeModel.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -902,6 +927,7 @@
 				4AE8DBBC263506D900D9A0FB /* FilmFacotryLocationDetailHeader.m in Sources */,
 				8A72B68A262FC38800582123 /* FilmFactoryHomeBtn.m in Sources */,
 				4AE8DBDA2635113000D9A0FB /* FilmLoactionJoinViewController.m in Sources */,
+				8AAF728826379A600002D80C /* FilmFacotryShangyinDetailHeader.m in Sources */,
 				8A54C4C426364C5E008E3A6B /* FilmFactroysystemTableViewCell.m in Sources */,
 				8A3EF896262EC1D4001618BD /* FilmFactoryZoneTableViewCell.m in Sources */,
 				8A91B79F2632658C006A3EC1 /* FilmFacroryHomeDetailViewController.m in Sources */,
@@ -928,6 +954,7 @@
 				4A191F29263708D7005550C8 /* FilmFacotryShangyingDetailViewController.m in Sources */,
 				8A91B86F2632A9DD006A3EC1 /* FilmFacorrLoactoinDetailViewController.m in Sources */,
 				8A72B684262FBF4700582123 /* FilmFactoryMovieView.m in Sources */,
+				8AAF728E2637A3550002D80C /* FilmFacoreyCoinView.m in Sources */,
 				4AEFAE352636F6C0001954F1 /* ShuyunHomeNewsTableViewCell.m in Sources */,
 				4AEFAE47263701B3001954F1 /* FilmFacotryShangyinViewController.m in Sources */,
 				4AE8DC1826355E6C00D9A0FB /* FilmFacorryZoneDetailheader.m in Sources */,
@@ -940,6 +967,8 @@
 				8A91B8462632A119006A3EC1 /* FilmFacroyCenterBtn.m in Sources */,
 				8A54C4BE26364AB0008E3A6B /* FilmFactoryComenmtNotiViewController.m in Sources */,
 				8A3EF864262EB321001618BD /* UIColor+CHRegex.m in Sources */,
+				8AAF72A02637F21C0002D80C /* FilmFactoryShangyinModel.m in Sources */,
+				8AAF72942637AA3B0002D80C /* FilmFacotryArticlCollectionViewCell.m in Sources */,
 				4A48FEBD262F159300D219D5 /* FilmFactoryBtn.m in Sources */,
 				8A3EF867262EB321001618BD /* NSString+CHRegex.m in Sources */,
 				8A3EF87B262EB43D001618BD /* FilmFactoryHomeViewController.m in Sources */,
@@ -950,6 +979,7 @@
 				8A3EF86F262EB3B7001618BD /* FilmFactoryBaeTabbarViewController.m in Sources */,
 				8A91B80A26329BF5006A3EC1 /* FilmFactorySugestionViewController.m in Sources */,
 				8A91B81326329C90006A3EC1 /* FilmFacotroySugestionTableCell.m in Sources */,
+				8AAF729A2637BD390002D80C /* FilmFacotryHomeModel.m in Sources */,
 				8A3EF89C262EC469001618BD /* FilmFactorySectionHeader.m in Sources */,
 				4A48FEB7262F0E6000D219D5 /* FilmFactoryMsgHeaderView.m in Sources */,
 				4AEFAE2F2636F697001954F1 /* ShuyunHomeNewsModel.m in Sources */,

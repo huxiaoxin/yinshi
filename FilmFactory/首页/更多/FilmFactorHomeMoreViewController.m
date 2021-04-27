@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.gk_navTitle = @"橙子推荐";
+    self.gk_navTitle = @"企鹅追剧";
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.FilmFactoryTableView];
     // Do any additional setup after loading the view.

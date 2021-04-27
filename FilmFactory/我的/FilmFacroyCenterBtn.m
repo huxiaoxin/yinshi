@@ -18,7 +18,7 @@
 - (UIImageView *)FilmTopImgView{
     if (!_FilmTopImgView) {
         _FilmTopImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
-        _FilmTopImgView.backgroundColor = LGDRedColor;
+//        _FilmTopImgView.backgroundColor = LGDRedColor;
     }
     return _FilmTopImgView;
 }
