@@ -18,6 +18,13 @@
         [LCProgressHUD showInfoMsg:@"没有修改任何内容"];
         return;
     }
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[NSUserDefaults standardUserDefaults] setObject:self->_MyTextField.text forKey:@"FilmGetuserName"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [LCProgressHUD showSuccess:@"修改成功"];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
 }
 - (void)viewDidLoad {
     [super viewDidLoad];

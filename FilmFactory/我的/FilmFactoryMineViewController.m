@@ -11,6 +11,9 @@
 #import "FilmFactorySugestionViewController.h"
 #import "FilmFactoryAboutusViewController.h"
 #import "FilmFactoryChangeInfoViewController.h"
+#import "FilmFactoryMySendViewController.h"
+#import "FilmMyYuyueViewController.h"
+#import "FilmMyColltecdViewController.h"
 @interface FilmFactoryMineViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacroryMineHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFacroryTableView;
 @property(nonatomic,strong) FilmFacroryMineHeaderView * FilmFacoryHeader;
@@ -21,7 +24,7 @@
 
 - (NSMutableArray *)FilmDataArr{
     if (!_FilmDataArr) {
-        _FilmDataArr = @[@"意见反馈",@"清除缓存",@"关于我们",@"当前版本"].mutableCopy;
+        _FilmDataArr = @[@"意见反馈",@"清除缓存",@"关于我们",@"当前版本",@"退出登录"].mutableCopy;
     }
     return _FilmDataArr;
 }
@@ -114,9 +117,35 @@
         FilmFactoryAboutusViewController * FilmFactorVc =  [[FilmFactoryAboutusViewController alloc]init];
         FilmFactorVc.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:FilmFactorVc animated:YES];
+    }else if (indexPath.row == 3){
+        
     }else{
-        [self FilmFactoryBaseShowLoginVc];
+        if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+            [LCProgressHUD showLoading:@""];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [FilmFactoryToolModel XiaoxinpaperToolModelWithLoginout];
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"FilmFacotryLoginout" object:nil];
+                [LCProgressHUD showSuccess:@"退出登录"];
+                [self FilmeuserNotLogin];
+            });
+        }
+        
     }
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+    [self.FilmFacoryHeader.FilmFacoryImgView sd_setImageWithURL:[NSURL URLWithString:@"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201509%2F20%2F20150920105348_38Ewf.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622122578&t=b958e581d60c7e075d8725af3bbd6127"]];
+        self.FilmFacoryHeader.FilmToplb.text = [FilmFactoryToolModel FilmGetuserName];
+        self.FilmFacoryHeader.FilmBtomlb.text = @"uid:52737379";
+    }else{
+        [self FilmeuserNotLogin];
+    }
+}
+-(void)FilmeuserNotLogin{
+    self.FilmFacoryHeader.FilmFacoryImgView.image = [UIImage imageNamed:@""];
+    self.FilmFacoryHeader.FilmToplb.text  =@"未登录";
+    self.FilmFacoryHeader.FilmBtomlb.text = @"";
 }
 - (CGFloat)FilmitemCacoutleMermroSize{
     CGFloat FilmitemCacoutleMermroSize = 0.0;
@@ -152,9 +181,34 @@
 }
 #pragma mark--FilmFacroryMineHeaderViewDelegate
 -(void)FilmFacroryMineHeaderViewChangeInfo{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
     FilmFactoryChangeInfoViewController * FilmChangeVc = [[FilmFactoryChangeInfoViewController alloc]init];
     FilmChangeVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:FilmChangeVc animated:YES];
+}
+-(void)FilmFacroryMineHeaderViewWithBtnClickIndex:(NSInteger)btnIndex{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
+    if (btnIndex == 0) {
+        FilmFactoryMySendViewController * FilmMysendVc = [[FilmFactoryMySendViewController alloc]init];
+        FilmMysendVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FilmMysendVc animated:YES];
+    }else if (btnIndex == 1){
+        FilmMyYuyueViewController * FilmyuyeVc = [[FilmMyYuyueViewController alloc]init];
+        FilmyuyeVc.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:FilmyuyeVc animated:YES];
+    }else if (btnIndex == 2){
+        FilmMyColltecdViewController * FilmMyColltecdVc = [[FilmMyColltecdViewController alloc]init];
+        FilmMyColltecdVc.hidesBottomBarWhenPushed =YES;
+        [self.navigationController pushViewController:FilmMyColltecdVc animated:YES];
+    }
 }
 /*
 #pragma mark - Navigation

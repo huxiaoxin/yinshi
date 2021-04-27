@@ -8,9 +8,6 @@
 #import "FilmFacroryMineHeaderView.h"
 #import "FilmFacroyCenterBtn.h"
 @interface FilmFacroryMineHeaderView ()
-@property(nonatomic,strong) UIImageView * FilmFacoryImgView;
-@property(nonatomic,strong) UILabel    * FilmToplb;
-@property(nonatomic,strong) UILabel    * FilmBtomlb;
 @property(nonatomic,strong) UIButton   * FilmChangeBtn;
 @end
 @implementation FilmFacroryMineHeaderView
@@ -38,7 +35,7 @@
     return self;
 }
 -(void)FilmfacoryCenterBtnClick:(FilmFacroyCenterBtn *)centerBtn{
-    NSLog(@"%ld",centerBtn.tag);
+    [self.delegate FilmFacroryMineHeaderViewWithBtnClickIndex:centerBtn.tag];
 }
 - (UIImageView *)FilmFacoryImgView{
     if (!_FilmFacoryImgView) {

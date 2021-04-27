@@ -53,7 +53,8 @@
         }];
         FilmStarview.userInteractionEnabled =NO;
         [self.contentView addSubview:FilmStarview];
-        FilmStarview.currentStar = 4.0f;
+        _FilmstarView =  FilmStarview;
+        
         
         UIButton * FilmWatchBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width-K(60), CGRectGetMaxY(FilmDeeplb.frame)+K(8), K(50), K(20))];
         FilmWatchBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
@@ -73,6 +74,7 @@
     [_FilmThubImgView sd_setImageWithURL:[NSURL URLWithString:filmHomeModel.imgTubUrl]];
     _FilmToptitle.text = filmHomeModel.famous;
     _FilmCenterlb.text =  filmHomeModel.articlList;
-    NSLog(@"articlList==%@",filmHomeModel.articlList);
+    _FilmstarView.currentStar = filmHomeModel.total_Num;
+
 }
 @end

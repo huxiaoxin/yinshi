@@ -10,7 +10,7 @@
 #import "FilmFactoryMovieView.h"
 #import "FilmFactoryHomeBtn.h"
 #import <SDCycleScrollView.h>
-@interface FilmFactoryHomeHeaderView ()<KJBannerViewDataSource,KJBannerViewDelegate,SDCycleScrollViewDelegate>
+@interface FilmFactoryHomeHeaderView ()<KJBannerViewDataSource,KJBannerViewDelegate,SDCycleScrollViewDelegate,FilmFactoryMovieViewDelegate>
 @property(nonatomic,strong) KJBannerView   * Filmbanar;
 @property(nonatomic,strong) NSMutableArray * banarModelArr;
 @property(nonatomic,strong) FilmFactoryMovieView         * movieView;
@@ -55,8 +55,8 @@
         SDCView.showPageControl = NO;
         SDCView.delegate = self;
         [self addSubview:SDCView];
-        SDCView.imageURLStringsGroup = @[@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img3.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img2.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img1.png"];
         
+        _SDCView = SDCView;
         
         
         UILabel * FilmFactoTitle = [[UILabel alloc]initWithFrame:CGRectMake(K(20), CGRectGetMaxY(SDCView.frame)+K(15), K(250), K(20))];
@@ -113,12 +113,18 @@
 -(void)moreInfoTapClicks{
     [self.delegate FilmFactoryHomeHeaderViewMToMoreVc];
 }
--(UIView *)movieView{
+#pragma mark--FilmFactoryMovieViewDelegate
+-(void)FilmFactoryMovieViewtap{
+    [self.delegate FilmFactoryHomeHeaderViewToMovieDetail];
+}
+-(FilmFactoryMovieView *)movieView{
     if (!_movieView) {
         _movieView = [[FilmFactoryMovieView alloc]initWithFrame:CGRectMake(K(15), CGRectGetMaxY(_Filmbanar.frame)+K(10), SCREEN_Width-K(30), K(80))];
         _movieView.backgroundColor = LGDLightGaryColor;
         _movieView.layer.cornerRadius = K(5);
         _movieView.layer.masksToBounds = YES;
+        _movieView.hidden = YES;
+        _movieView.delegate = self;
     }
     return _movieView;
 }
@@ -131,6 +137,7 @@
         _Filmbanar.isZoom = YES;
         _Filmbanar.itemSpace = -K(5);
         _Filmbanar.itemWidth = K(280);
+        _Filmbanar.hidden = YES;
     }
     return _Filmbanar;
 }
@@ -146,5 +153,12 @@
 }
 -(void)homeBtnClick:(FilmFactoryHomeBtn *)filmbtn{
     [self.delegate FilmFactoryHomeHeaderViewBtnClickIndex:filmbtn.tag];
+}
+- (void)setIsSet:(BOOL)isSet{
+    _isSet = isSet;
+    _SDCView.imageURLStringsGroup = @[@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img3.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img2.png",@"https://107cine.cdn.cinehello.com/shequn/sigma/line_img1.png"];
+
+    _movieView.hidden =NO;
+    _Filmbanar.hidden = NO;
 }
 @end

@@ -96,6 +96,11 @@
 }
 #pragma mark--ShuyunshequDetailTableViewCellDelegate
 -(void)FilmFarZoneDetiaCellDetailTableViewCellWithIndex:(NSInteger)Cellindex FilmFarZoneDetiaCellbtnTag:(NSInteger)btnIndex{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
     FilmFactoryComentModel * comentModel = self.FilmDataArr[Cellindex];
     if (btnIndex == 1) {
         FilmZoneJbaoController * jubaoVc = [[FilmZoneJbaoController alloc]init];
@@ -156,6 +161,11 @@
 }
 #pragma mark--FilmFacorryZoneDetailheaderDelegate
 -(void)FilmFacorryZoneDetailheaderWithBtnIndex:(NSInteger)btnIndex{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
     if (btnIndex == 0) {
       //拉黑
         UIAlertController * FilmzonalterVc = [UIAlertController alertControllerWithTitle:@"温馨提示" message:[NSString stringWithFormat:@"您确定要屏蔽(%@)该用户吗？",self.filmModel.name] preferredStyle:UIAlertControllerStyleAlert];
@@ -184,7 +194,11 @@
     });
 }
 -(void)FilmAddComentBtnClick{
-    
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
 }
 /*
 #pragma mark - Navigation

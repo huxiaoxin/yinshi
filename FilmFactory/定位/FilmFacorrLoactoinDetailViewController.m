@@ -12,7 +12,7 @@
 #import "FilmLoactionJoinViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface FilmFacorrLoactoinDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FilmFacorrLoactoinDetailViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacotryLocationDetailHeaderDelegate>
 @property(nonatomic,strong) UITableView  * FilmFacotryTableView;
 @property(nonatomic,strong) FilmFacotryLocationDetailHeader * FilmDetailHeader;
 @property(nonatomic,strong) FilmFacortLoactionDetailFooter  * FilmDetailFooter;
@@ -40,6 +40,27 @@
     [FilmRightBtn addTarget:self action:@selector(FilmRightBtnClick) forControlEvents:UIControlEventTouchUpInside];
     self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:FilmRightBtn];
     // Do any additional setup after loading the view.
+}
+#pragma mark--FilmFacotryLocationDetailHeaderDelegate
+-(void)FilmFacotryLocationDetailHeaderBtnClick:(UIButton *)myBtn{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+    self.filmLoactionModel.isCollted = !self.filmLoactionModel.isCollted;
+
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (self.filmLoactionModel.isCollted) {
+            [LCProgressHUD showSuccess:@"关注成功"];
+            myBtn.selected = YES;
+        }else{
+            [LCProgressHUD showInfoMsg:@"取消关注"];
+            myBtn.selected = NO;
+        }
+        
+        [WHC_ModelSqlite update:[FilmFactortLoactionModel class] value:[NSString stringWithFormat:@"isCollted ='%@'",[NSNumber numberWithBool:self.filmLoactionModel.isCollted]] where:[NSString stringWithFormat:@"LoactionID ='%ld'",self.filmLoactionModel.LoactionID]];
+    });
 }
 -(void)FilmRightBtnClick{
     //终点坐标
@@ -87,6 +108,7 @@
 - (FilmFacotryLocationDetailHeader *)FilmDetailHeader{
     if (!_FilmDetailHeader) {
         _FilmDetailHeader = [[FilmFacotryLocationDetailHeader alloc]initWithFrame:CGRectMake(0, 0, SCREEN_Width, K(330)) ConfigWithModel:self.filmLoactionModel];
+        _FilmDetailHeader.delegate = self;
     }
     return _FilmDetailHeader;
 }
@@ -125,6 +147,10 @@
     return RealWidth(30);
 }
 -(void)FilmJoninbtnClick{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
     FilmLoactionJoinViewController * FilmJoinVc  = [[FilmLoactionJoinViewController alloc]init];
     FilmJoinVc.filmModel = self.filmLoactionModel;
     FilmJoinVc.hidesBottomBarWhenPushed = YES;

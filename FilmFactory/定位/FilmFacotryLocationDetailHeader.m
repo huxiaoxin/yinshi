@@ -42,8 +42,17 @@
         
         self.FilmFacotryHeight = CGRectGetMaxY(_FilmCemterlb.frame)+K(10);
 
+        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+            _FilmColltecdBtn.selected = filmModel.isCollted;
+        }else{
+            _FilmColltecdBtn.selected = NO;
+        }
+
     }
     return self;
+}
+-(void)FilmColltecdBtnClick:(UIButton *)myBtn{
+    [self.delegate FilmFacotryLocationDetailHeaderBtnClick:myBtn];
 }
 - (SDCycleScrollView *)FilmFactroyThubImgView{
     if (!_FilmFactroyThubImgView) {
@@ -66,7 +75,7 @@
         _FilmColltecdBtn = [[UIButton alloc]initWithFrame:CGRectMake(SCREEN_Width-K(40), CGRectGetMaxY(_FilmFactroyThubImgView.frame)+K(15), K(20), K(20))];
         [_FilmColltecdBtn setBackgroundImage:[UIImage imageNamed:@"shoucang-nomal"] forState:UIControlStateNormal];
         [_FilmColltecdBtn setBackgroundImage:[UIImage imageNamed:@"shoucang"] forState:UIControlStateSelected];
-
+        [_FilmColltecdBtn addTarget:self action:@selector(FilmColltecdBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _FilmColltecdBtn;
 }

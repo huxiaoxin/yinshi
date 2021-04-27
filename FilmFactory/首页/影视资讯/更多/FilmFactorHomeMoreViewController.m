@@ -7,8 +7,11 @@
 
 #import "FilmFactorHomeMoreViewController.h"
 #import "FilmFacroyHomeTableViewCell.h"
+#import "FilmFacotryShangyingDetailViewController.h"
 @interface FilmFactorHomeMoreViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
+@property(nonatomic,strong) NSMutableArray * FilmFactoryDataArr;
+
 @end
 
 @implementation FilmFactorHomeMoreViewController
@@ -19,6 +22,12 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.FilmFactoryTableView];
     // Do any additional setup after loading the view.
+}
+-(NSMutableArray *)FilmFactoryDataArr{
+    if (!_FilmFactoryDataArr) {
+        _FilmFactoryDataArr = [NSMutableArray array];
+    }
+    return _FilmFactoryDataArr;
 }
 
 - (UITableView *)FilmFactoryTableView{
@@ -36,7 +45,7 @@
     return _FilmFactoryTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.FilmFactoryDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * FilmFacoryIdentifer = @"FilmFacroyHomeTableViewCell";
@@ -44,17 +53,39 @@
     if (FilmFacoryCell == nil) {
         FilmFacoryCell = [[FilmFacroyHomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFacoryIdentifer];
     }
+    FilmFacoryCell.filmHomeMode = self.FilmFactoryDataArr[indexPath.row];
     return FilmFacoryCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return K(120);
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    FilmFacotryShangyingDetailViewController * FilmDetailVc = [[FilmFacotryShangyingDetailViewController alloc]init];
+    FilmDetailVc.hidesBottomBarWhenPushed = YES;
+    FilmDetailVc.filmHomeMode = self.FilmFactoryDataArr[indexPath.row];
+    [self.navigationController pushViewController:FilmDetailVc animated:YES];
+//    [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
+//        configure.backStyle = GKNavigationBarBackStyleWhite;
+//
+//    }];
+//    FilmFacroryHomeDetailViewController * FilmDetailVc = [[FilmFacroryHomeDetailViewController alloc]init];
+//    FilmDetailVc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:FilmDetailVc animated:YES];
+}
 
 -(void)FilmFactoryHeaderClicks{
     
+    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFacotryHomeModel class]];
+    MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_FilmFactoryTableView.mj_header endRefreshing];
+        if (weakSelf.FilmFactoryDataArr.count > 0) {
+            [weakSelf.FilmFactoryDataArr removeAllObjects];
+        }
+        weakSelf.FilmFactoryDataArr = dataArr.mutableCopy;
+        [weakSelf.FilmFactoryTableView reloadData];
+        [self->_FilmFactoryTableView.mj_header endRefreshing];
     });
+
     
 }
 /*

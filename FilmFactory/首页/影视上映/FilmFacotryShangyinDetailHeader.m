@@ -55,7 +55,7 @@
 }
 -(UIImageView *)FilmThubImgView{
     if (!_FilmThubImgView) {
-        _FilmThubImgView =[[UIImageView alloc]initWithFrame:CGRectMake(K(15), K(15)+NaviH, K(80), K(110))];
+        _FilmThubImgView =[[UIImageView alloc]initWithFrame:CGRectMake(K(15), K(15), K(80), K(110))];
         _FilmThubImgView.layer.cornerRadius = K(5);
         _FilmThubImgView.layer.masksToBounds = YES;
         _FilmThubImgView.backgroundColor = LGDLightGaryColor;
@@ -111,6 +111,17 @@
         _FilmCollecionBtn.layer.masksToBounds = YES;
         _FilmCollecionBtn.layer.borderColor = LGDMianColor.CGColor;
         _FilmCollecionBtn.layer.borderWidth = K(1);
+        [_FilmCollecionBtn addTarget:self action:@selector(FilmCollecionBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+            [_FilmCollecionBtn setBackgroundColor:LGDMianColor];
+            [_FilmCollecionBtn setTitle:@"已收藏" forState:UIControlStateNormal];
+            [_FilmCollecionBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        }else{
+            [_FilmCollecionBtn setBackgroundColor:[UIColor whiteColor]];
+            [_FilmCollecionBtn setTitle:@"收藏" forState:UIControlStateNormal];
+            [_FilmCollecionBtn setTitleColor:LGDMianColor forState:UIControlStateNormal];
+
+        }
     }
     return _FilmCollecionBtn;
 }
@@ -182,5 +193,8 @@
     FilmFacotryArticlCollectionViewCell * FilmCoinCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilmFacotryArticlCollectionViewCell" forIndexPath:indexPath];
     FilmCoinCell.FilmDic = self.selFilmModel.ListArr[indexPath.row];
     return FilmCoinCell;
+}
+-(void)FilmCollecionBtnClick:(UIButton *)btn{
+    [self.delegate FilmFacotryShangyinDetailHeaderDidSeltecdWithAction:btn];
 }
 @end

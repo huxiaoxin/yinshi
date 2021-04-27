@@ -26,6 +26,7 @@
         _FilFacoteryThubImgView.backgroundColor = LGDLightGaryColor;
         _FilFacoteryThubImgView.layer.cornerRadius = K(25);
         _FilFacoteryThubImgView.layer.masksToBounds = YES;
+        _FilFacoteryThubImgView.contentMode = UIViewContentModeScaleAspectFill;
     }
     return _FilFacoteryThubImgView;
 }

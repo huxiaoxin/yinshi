@@ -92,6 +92,7 @@
     NSMutableArray * tempArr = [NSMutableArray array];
     
     FilmFacotryHomeModel * FilmModel = [[FilmFacotryHomeModel alloc]init];
+    FilmModel.total_Num = 5;
     FilmModel.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0420/thumb_1_283_390_20210420020822855068.jpg";
     FilmModel.famous = @"速度与激情9";
     FilmModel.englishNae  =@"Fast & Furious 9";
@@ -116,6 +117,7 @@
     
 
     FilmFacotryHomeModel * FilmModel1 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel1.total_Num = 3;
     FilmModel1.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/1231/thumb_1_283_390_20201231115721553976.jpg";
     FilmModel1.famous = @"我的姐姐";
     FilmModel1.englishNae  =@"my sister";
@@ -141,6 +143,7 @@
 
 
     FilmFacotryHomeModel * FilmModel2 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel2.total_Num = 4;
     FilmModel2.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0414/thumb_1_283_390_20210414021224519985.jpg";
     FilmModel2.famous = @"指环王：双塔奇兵";
     FilmModel2.englishNae  =@"The Lord of the Rings: The Two Towers";
@@ -166,6 +169,7 @@
     
     
     FilmFacotryHomeModel * FilmModel3 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel3.total_Num = 3;
     FilmModel3.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0407/thumb_1_283_390_20210407110513749318.jpg";
     FilmModel3.famous = @"名侦探柯南：绯色的子弹";
     FilmModel3.englishNae  =@"名探偵コナン 緋色の弾丸";
@@ -191,6 +195,7 @@
     
     
     FilmFacotryHomeModel * FilmModel4 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel4.total_Num = 4;
     FilmModel4.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0308/thumb_1_283_390_20210308105717998691.jpg";
     FilmModel4.famous = @"真·三国无双";
     FilmModel4.englishNae  =@"Dynasty Warriors ";
@@ -215,6 +220,7 @@
     
     
     FilmFacotryHomeModel * FilmModel5 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel5.total_Num = 2;
     FilmModel5.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2018/0126/thumb_1_283_390_20180126093725820782.jpg";
     FilmModel5.famous = @"八月未央";
     FilmModel5.englishNae  =@"August Weiyang";
@@ -239,6 +245,7 @@
     
     
     FilmFacotryHomeModel * FilmModel6 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel6.total_Num = 4;
     FilmModel6.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0322/thumb_1_283_390_20210322090623344611.jpg";
     FilmModel6.famous = @"超级的我";
     FilmModel6.englishNae  =@"Super Me";
@@ -263,6 +270,7 @@
     
     
     FilmFacotryHomeModel * FilmModel7 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel7.total_Num = 5;
     FilmModel7.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0219/thumb_1_230_307_20210219092618173678.jpg";
     FilmModel7.famous = @"西游记之再世妖王 ";
     FilmModel7.englishNae  =@"Monkey King Reborn";
@@ -287,6 +295,7 @@
     
     //
     FilmFacotryHomeModel * FilmModel8 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel8.total_Num = 3;
     FilmModel8.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0318/thumb_1_283_390_20210318101444994601.jpg";
     FilmModel8.famous = @"六人-泰坦尼克上的中国幸存者 ";
     FilmModel8.englishNae  =@"The Six";
@@ -310,6 +319,7 @@
     [tempArr addObject:FilmModel8];
     
     FilmFacotryHomeModel * FilmModel9 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel9.total_Num = 4;
     FilmModel9.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0419/thumb_1_283_390_20210419101632664004.jpg";
     FilmModel9.famous = @"冰雪大作战2";
     FilmModel9.englishNae  =@"Racetime";
@@ -337,6 +347,7 @@
     
     
     FilmFacotryHomeModel * FilmModel10 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel10.total_Num = 3;
     FilmModel10.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0122/thumb_1_283_390_20210122021918487741.jpg";
     FilmModel10.famous = @"真人快打";
     FilmModel10.englishNae  =@"Mortal Kombat";
@@ -361,6 +372,7 @@
     
     
     FilmFacotryHomeModel * FilmModel11 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel11.total_Num = 4;
     FilmModel11.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0312/thumb_1_283_390_20210312014243270403.jpg";
     FilmModel11.famous = @"星期一";
     FilmModel11.englishNae  =@"Monday";
@@ -385,6 +397,7 @@
     
     
     FilmFacotryHomeModel * FilmModel12 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel12.total_Num = 3;
     FilmModel12.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0312/thumb_1_283_390_20210312014243270403.jpg";
     FilmModel12.famous = @"椿之庭";
     FilmModel12.englishNae  =@"椿の庭";
@@ -410,6 +423,7 @@
     
     
     FilmFacotryHomeModel * FilmModel13 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel13.total_Num = 4;
     FilmModel13.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0129/thumb_1_283_390_20210129042050249757.jpg";
     FilmModel13.famous = @"信使";
     FilmModel13.englishNae  =@"The Courier";
@@ -434,6 +448,7 @@
     
     
     FilmFacotryHomeModel * FilmModel14 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel14.total_Num = 5;
     FilmModel14.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/1222/thumb_1_283_390_20201222085757354043.jpg";
     FilmModel14.famous = @"美国之旅2";
     FilmModel14.englishNae  =@"Coming to America 2 ";
@@ -458,6 +473,7 @@
     
     
     FilmFacotryHomeModel * FilmModel15 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel15.total_Num = 3;
     FilmModel15.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0325/thumb_1_283_390_20210325091305262105.jpg";
     FilmModel15.famous = @"偷渡者";
     FilmModel15.englishNae  =@"Stowaway";
@@ -482,6 +498,7 @@
     
     
     FilmFacotryHomeModel * FilmModel16 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel16.total_Num = 3;
     FilmModel16.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/1211/thumb_1_283_390_20201211044305170567.jpg";
     FilmModel16.famous = @"小人物";
     FilmModel16.englishNae  =@"Nobody";
@@ -507,6 +524,7 @@
     
     
     FilmFacotryHomeModel * FilmModel17 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel17.total_Num = 5;
     FilmModel17.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0326/thumb_1_283_390_20210326092453343388.jpg";
     FilmModel17.famous = @"人之怒";
     FilmModel17.englishNae  =@"Wrath of Man";
@@ -531,6 +549,7 @@
     
     
     FilmFacotryHomeModel * FilmModel18 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel18.total_Num = 3;
     FilmModel18.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0409/thumb_1_283_390_20210409040722609282.jpg";
     FilmModel18.famous = @"窗里的女人";
     FilmModel18.englishNae  =@"The Woman in the Window ";
@@ -556,6 +575,7 @@
     
     
     FilmFacotryHomeModel * FilmModel19 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel19.total_Num = 3;
     FilmModel19.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/0214/thumb_1_283_390_20200214113711593220.jpg";
     FilmModel19.famous = @"侏罗纪世界3：统治";
     FilmModel19.englishNae  =@"Jurassic World: Dominion ";
@@ -580,6 +600,7 @@
     
     
     FilmFacotryHomeModel * FilmModel20 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel20.total_Num = 3;
     FilmModel20.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/0310/thumb_1_283_390_20200310091515917165.jpg";
     FilmModel20.famous = @"黑寡妇";
     FilmModel20.englishNae  =@"The Black Widow";
@@ -604,6 +625,7 @@
     
     
     FilmFacotryHomeModel * FilmModel21 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel21.total_Num = 3;
     FilmModel21.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2020/0310/thumb_1_283_390_20200310092825941202.jpg";
     FilmModel21.famous = @"电锯惊魂9：螺旋";
     FilmModel21.englishNae  =@"Spiral: From the Book of Saw ";
@@ -628,6 +650,7 @@
     
     
     FilmFacotryHomeModel * FilmModel22 = [[FilmFacotryHomeModel alloc]init];
+    FilmModel22.total_Num = 4;
     FilmModel22.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2019/1205/thumb_1_283_390_20191205092914319879.jpg";
     FilmModel22.famous = @"007：无暇赴死";
     FilmModel22.englishNae  =@"Bond 25";
@@ -640,7 +663,7 @@
     FilmModel22.filmStar_one =0.1;
     FilmModel22.isColletcd = NO;
     FilmModel22.ListArr = @[@{@"img":@"http://image14.m1905.cn/uploadfile/2013/0122/thumb_1_300_410_20130122110606301.jpg",@"title":@"丹尼尔·克雷格"},@{@"img":@"http://image14.m1905.cn/uploadfile/2014/0905/thumb_1_300_410_20140905095626569818.jpg",@"title":@"蕾雅·赛杜"},@{@"img":@"http://image11.m1905.cn/mdb/uploadfile/2019/0218/thumb_1_300_410_20190218035837311784.jpg",@"title":@"拉米·马雷克"},@{@"img":@"http://image14.m1905.cn/uploadfile/2014/1201/thumb_1_300_410_20141201012520228906.jpg",@"title":@"本·卫肖"}];
-    FilmModel21.intrduce = @"这两部影片或将成为007历史上第一次“背靠背拍摄”的影片，最早将在明年秋天开拍，其中第24部007电影计划在2014年秋上映，丹尼尔·克雷格（Daniel Craig）将继续扮演邦德。";
+    FilmModel22.intrduce = @"这两部影片或将成为007历史上第一次“背靠背拍摄”的影片，最早将在明年秋天开拍，其中第24部007电影计划在2014年秋上映，丹尼尔·克雷格（Daniel Craig）将继续扮演邦德。";
     FilmModel22.CoinNum = 57892;
     FilmModel22.DoubanNum = 7.4;
     FilmModel22.FilmID = 22;
@@ -1000,6 +1023,7 @@
 +(void)FilmFactortLoactionModelConfig{
     NSMutableArray * FilmTempArr  =[NSMutableArray array];
     FilmFactortLoactionModel * locationModel =[[FilmFactortLoactionModel alloc]init];
+    locationModel.isBaoming = YES;
     locationModel.imgArrs = @[@"https://image11.m1905.cn/uploadfile/2021/0422/thumb_1_1380_460_20210422115515830912.jpg",@"https://image11.m1905.cn/uploadfile/2021/0421/20210421100904690123.jpg",@"https://image11.m1905.cn/uploadfile/2021/0421/20210421100807468261.jpg",@"https://image11.m1905.cn/uploadfile/2021/0421/20210421100659458584.jpg"];
     locationModel.FilmThubImgView = @"https://image11.m1905.cn/uploadfile/2021/0422/thumb_1_1380_460_20210422115515830912.jpg";
     locationModel.title = @"9.2分！张艺谋的《悬崖之上》要接棒《风声》？";
@@ -1019,6 +1043,7 @@
     
     
     FilmFactortLoactionModel * locationModel1 =[[FilmFactortLoactionModel alloc]init];
+    locationModel1.isBaoming = NO;
     locationModel1.imgArrs = @[@"https://image11.m1905.cn/uploadfile/2021/0420/20210420091203793134.jpg",@"https://image11.m1905.cn/uploadfile/2021/0420/20210420091203916952.jpg",@"https://image11.m1905.cn/uploadfile/2021/0420/20210420091203488830.jpg",@"https://image11.m1905.cn/uploadfile/2021/0420/20210420091203662430.jpg"];
     locationModel1.FilmThubImgView = @"https://image11.m1905.cn/uploadfile/2021/0420/20210420091203793134.jpg";
     locationModel1.title = @"盘点革命年代的伟大爱恋：风雨中，这份爱更浪漫";
@@ -1039,6 +1064,7 @@
     
     
     FilmFactortLoactionModel * locationModel2 =[[FilmFactortLoactionModel alloc]init];
+    locationModel2.isBaoming = NO;
     locationModel2.imgArrs = @[@"https://image11.m1905.cn/uploadfile/2021/0422/20210422093528960692.jpg",@"https://image11.m1905.cn/uploadfile/2021/0422/20210422093507477089.jpg",@"https://image11.m1905.cn/uploadfile/2021/0422/20210422093512101009.jpg",@"https://image11.m1905.cn/uploadfile/2021/0422/20210422093032561680.jpg"];
     locationModel2.FilmThubImgView = @"https://image11.m1905.cn/uploadfile/2021/0422/20210422093528960692.jpg";
     locationModel2.title = @"解析《真·三国无双》：“魔改”吃力不讨好？";
@@ -1059,6 +1085,7 @@
     
     
     FilmFactortLoactionModel * locationModel3 =[[FilmFactortLoactionModel alloc]init];
+    locationModel3.isBaoming = NO;
     locationModel3.imgArrs = @[@"https://image11.m1905.cn/uploadfile/2021/0420/20210420094136681332.jpg",@"https://image11.m1905.cn/uploadfile/2021/0420/20210420093944505624.jpg"];
     locationModel3.FilmThubImgView = @"https://image11.m1905.cn/uploadfile/2021/0420/20210420094136681332.jpg";
     locationModel3.title = @"《八月未央》遭吐槽 原来小说影视化的秘密在这里";
@@ -1078,6 +1105,7 @@
 
     
     FilmFactortLoactionModel * locationModel4 =[[FilmFactortLoactionModel alloc]init];
+    locationModel4.isBaoming = NO;
     locationModel4.imgArrs = @[@"https://image11.m1905.cn/uploadfile/2021/0423/20210423114209277070.jpg",@"https://image11.m1905.cn/uploadfile/2021/0423/20210423114209886610.jpg",@"https://image11.m1905.cn/uploadfile/2021/0423/20210423114209328063.jpg",@"https://image11.m1905.cn/uploadfile/2021/0423/20210423114212730912.jpg"];
     locationModel4.FilmThubImgView = @"https://image11.m1905.cn/uploadfile/2021/0423/20210423114209277070.jpg";
     locationModel4.title = @"《追虎擒龙》曝预告、海报 古天乐梁家辉黑白交锋";

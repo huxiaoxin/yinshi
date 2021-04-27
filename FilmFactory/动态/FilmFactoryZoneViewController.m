@@ -48,7 +48,11 @@
     // Do any additional setup after loading the view
 }
 -(void)FilmItemAdvicCommitbtnClick{
-    
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
     FilmFActorySendZoneConroller * FilmdSendVc =[[FilmFActorySendZoneConroller alloc]init];
     
     UINavigationController * FilmNav = [UINavigationController rootVC:FilmdSendVc translationScale:YES];
@@ -127,6 +131,10 @@
 }
 #pragma mark--FilmFactoryZoneTableViewCellDelegate
 -(void)FilmFactoryZoneTableViewCellWithBtnClickIndex:(NSInteger)btnIndex CellConfigIndex:( NSIndexPath *)cellIndex{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
     FilmFactoryZoneModel * filmModel = self.FilmFactorydataArr[cellIndex.section][cellIndex.row];
     if (btnIndex == 0) {
         FilmChatMsgListModel * myfilmModel = [[FilmChatMsgListModel alloc]init];

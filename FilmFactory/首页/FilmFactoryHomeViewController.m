@@ -15,6 +15,8 @@
 #import "FilmFactortLoactionModel.h"
 #import "FilmFacorrLoactoinDetailViewController.h"
 #import "FilmFacotryShangyinViewController.h"
+#import "FilmFacotryHomeModel.h"
+#import "FilmFacotryShangyingDetailViewController.h"
 @interface FilmFactoryHomeViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFactoryHomeHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFactoryTableView;
 @property(nonatomic,strong) FilmFactoryHomeHeaderView * FilmHeader;
@@ -23,6 +25,12 @@
 
 @implementation FilmFactoryHomeViewController
 
+-(NSMutableArray *)FilmFactoryDataArr{
+    if (!_FilmFactoryDataArr) {
+        _FilmFactoryDataArr = [NSMutableArray array];
+    }
+    return _FilmFactoryDataArr;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle =  @"企鹅追剧";
@@ -53,7 +61,7 @@
     return _FilmFactoryTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 10;
+    return self.FilmFactoryDataArr.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * FilmFacoryIdentifer = @"FilmFacroyHomeTableViewCell";
@@ -61,20 +69,26 @@
     if (FilmFacoryCell == nil) {
         FilmFacoryCell = [[FilmFacroyHomeTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFacoryIdentifer];
     }
+    FilmFacoryCell.filmHomeMode = self.FilmFactoryDataArr[indexPath.row];
     return FilmFacoryCell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return K(120);
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
-        configure.backStyle = GKNavigationBarBackStyleWhite;
-        
-    }];
-    FilmFacroryHomeDetailViewController * FilmDetailVc = [[FilmFacroryHomeDetailViewController alloc]init];
+    FilmFacotryShangyingDetailViewController * FilmDetailVc = [[FilmFacotryShangyingDetailViewController alloc]init];
     FilmDetailVc.hidesBottomBarWhenPushed = YES;
+    FilmDetailVc.filmHomeMode = self.FilmFactoryDataArr[indexPath.row];
     [self.navigationController pushViewController:FilmDetailVc animated:YES];
+//    [[GKNavigationBarConfigure sharedInstance] updateConfigure:^(GKNavigationBarConfigure *configure) {
+//        configure.backStyle = GKNavigationBarBackStyleWhite;
+//
+//    }];
+//    FilmFacroryHomeDetailViewController * FilmDetailVc = [[FilmFacroryHomeDetailViewController alloc]init];
+//    FilmDetailVc.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:FilmDetailVc animated:YES];
 }
+
 #pragma mark--FilmFactoryHomeHeaderViewDelegate
 -(void)FilmFactoryHomeHeaderViewMToMoreVc{
     FilmFactorHomeMoreViewController  * filmmoreVc = [[FilmFactorHomeMoreViewController alloc]init];
@@ -100,7 +114,6 @@
 -(void)FilmFactoryHomeHeaderViewWithTopBanarIndex:(NSInteger)topBanarIndex{
     if (topBanarIndex == 1) {
         NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactortLoactionModel class]];
-        NSLog(@"-------%ld",dataArr.count);
         FilmFacorrLoactoinDetailViewController  * locationDetaioVc  = [[FilmFacorrLoactoinDetailViewController alloc]init];
         locationDetaioVc.hidesBottomBarWhenPushed = YES;
         locationDetaioVc.filmLoactionModel = dataArr.firstObject;
@@ -129,9 +142,25 @@
         [self.navigationController pushViewController:FilmFacctoryVc animated:YES];
     }
 }
+-(void)FilmFactoryHomeHeaderViewToMovieDetail{
+  NSArray * dataArr =  [WHC_ModelSqlite query:[FilmFacotryHomeModel class] where:[NSString stringWithFormat:@"FilmID ='%ld'",0]];
+    FilmFacotryShangyingDetailViewController * FilmDetailVc = [[FilmFacotryShangyingDetailViewController alloc]init];
+    FilmDetailVc.hidesBottomBarWhenPushed = YES;
+    FilmDetailVc.filmHomeMode = dataArr.firstObject;
+    [self.navigationController pushViewController:FilmDetailVc animated:YES];
+}
 -(void)FilmFactoryHeaderClicks{
-    
+    [LCProgressHUD showLoading:@""];
+    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFacotryHomeModel class]];
+    MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD hide];
+        if (weakSelf.FilmFactoryDataArr.count > 0) {
+            [weakSelf.FilmFactoryDataArr removeAllObjects];
+        }
+        weakSelf.FilmFactoryDataArr = [dataArr subarrayWithRange:NSMakeRange(3, 6)].mutableCopy;
+        weakSelf.FilmHeader.isSet = YES;
+        [weakSelf.FilmFactoryTableView reloadData];
         [self->_FilmFactoryTableView.mj_header endRefreshing];
     });
     

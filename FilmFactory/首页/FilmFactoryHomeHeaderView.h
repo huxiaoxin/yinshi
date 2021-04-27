@@ -14,8 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)FilmFactoryHomeHeaderViewDidSeltecdWithBanarIndex:(NSInteger)banarIndex;
 -(void)FilmFactoryHomeHeaderViewBtnClickIndex:(NSInteger)btnIndex;
 -(void)FilmFactoryHomeHeaderViewWithTopBanarIndex:(NSInteger)topBanarIndex;
+-(void)FilmFactoryHomeHeaderViewToMovieDetail;
 @end
 @interface FilmFactoryHomeHeaderView : UIView
+@property(nonatomic,assign) BOOL isSet;
 @property(nonatomic,weak) id <FilmFactoryHomeHeaderViewDelegate>delegate;
 @end
 

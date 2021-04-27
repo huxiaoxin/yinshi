@@ -35,6 +35,20 @@
     }
     return self;
 }
+- (void)setFilmHomeMode:(FilmFacotryHomeModel *)filmHomeMode{
+    _filmHomeMode = filmHomeMode;
+    [_FilmThubImgView sd_setImageWithURL:[NSURL URLWithString:filmHomeMode.imgTubUrl]];
+    _FilmToplb.text = filmHomeMode.famous;
+    _FilmBtomlb.text =  filmHomeMode.intrduce;
+    _FilmTagOnelb.text = filmHomeMode.tagOne;
+    _FilmTagTwolb.text = filmHomeMode.tagTwo;
+    if (filmHomeMode.tagTwo.length == 0) {
+        _FilmTagTwolb.hidden =YES;
+    }else{
+        _FilmTagTwolb.hidden =NO;
+    }
+    _FilmTimelb.text = filmHomeMode.time;
+}
 - (UIView *)FilmFacroContentView{
     if (!_FilmFacroContentView) {
         _FilmFacroContentView = [[UIView alloc]initWithFrame:CGRectMake(K(15), K(20), SCREEN_Width-K(30), K(100))];
@@ -49,9 +63,11 @@
 - (UIImageView *)FilmThubImgView{
     if (!_FilmThubImgView) {
         _FilmThubImgView = [[UIImageView alloc]initWithFrame:CGRectMake(K(20), K(10), K(105), K(105))];
-        _FilmThubImgView.backgroundColor = LGDMianColor;
+        _FilmThubImgView.backgroundColor = LGDLightGaryColor;
         _FilmThubImgView.layer.cornerRadius = K(5);
         _FilmThubImgView.layer.masksToBounds = YES;
+        _FilmThubImgView.contentMode = UIViewContentModeScaleAspectFill;
+        
     }
     return _FilmThubImgView;
 }
@@ -107,7 +123,7 @@
 }
 - (UILabel *)FilmTimelb{
     if (!_FilmTimelb) {
-        _FilmTimelb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetWidth(_FilmFacroContentView.frame)-K(130), CGRectGetMaxY(_FilmBtomlb.frame)+K(12), K(120), K(12))];
+        _FilmTimelb = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetWidth(_FilmFacroContentView.frame)-K(130), CGRectGetMaxY(_FilmBtomlb.frame)+K(14), K(120), K(12))];
         _FilmTimelb.textAlignment = NSTextAlignmentRight;
         _FilmTimelb.font = [UIFont systemFontOfSize:12];
         _FilmTimelb.textColor = LGDGaryColor;

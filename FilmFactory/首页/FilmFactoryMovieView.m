@@ -20,8 +20,14 @@
         [self addSubview:self.thubImgView];
         [self addSubview:self.thubImgView];
         [self addSubview:self.sourcelb];
+        
+        UITapGestureRecognizer * FilmMytap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(FilmMyTapClick)];
+        [self addGestureRecognizer:FilmMytap];
     }
     return self;
+}
+-(void)FilmMyTapClick{
+    [self.delegate FilmFactoryMovieViewtap];
 }
 - (UILabel *)Topnamelb{
     if (!_Topnamelb) {
@@ -29,8 +35,8 @@
         _Topnamelb.textColor = [UIColor blackColor];
         _Topnamelb.font = [UIFont boldSystemFontOfSize:15];
 //        _Topnamelb.text = @"速度与激情  ";
-        NSString * firstStr = @"速度与激情  ";
-        NSString * secondStr = @"7.5分";
+        NSString * firstStr = @"速度与激情9  ";
+        NSString * secondStr = @"9.1分";
         NSMutableAttributedString * mutableAttbute = [[NSMutableAttributedString alloc]initWithString:[NSString stringWithFormat:@"%@%@",firstStr,secondStr]];
         [mutableAttbute addAttribute:NSFontAttributeName value:[UIFont boldSystemFontOfSize:16] range:NSMakeRange(0, firstStr.length)];
         [mutableAttbute addAttribute:NSForegroundColorAttributeName value:[UIColor blackColor] range:NSMakeRange(0, firstStr.length)];
@@ -49,14 +55,17 @@
 //        _Btomlb.backgroundColor = LGDMianColor;
         _Btomlb.font = [UIFont systemFontOfSize:12];
         _Btomlb.numberOfLines = 0;
-        _Btomlb.text = @"主演:蒂姆·贝万、莉莎·蔡辛、理查德·艾尔、艾里克·费尔纳、罗伯特·福克斯、Jane Frazer、Debra Hayward、伊恩·麦克尤恩、Paul Webster";
+        _Btomlb.text = @"主演:Vin Diesel/Tyrese Gibson/Lucas Black/John Cena";
     }
     return _Btomlb;
 }
 - (UIImageView *)thubImgView{
     if (!_thubImgView) {
         _thubImgView = [[UIImageView alloc]initWithFrame:CGRectZero];
-        _thubImgView.backgroundColor = LGDGaryColor;
+        _thubImgView.backgroundColor = LGDLightGaryColor;
+        [_thubImgView sd_setImageWithURL:[NSURL URLWithString:@"https://image11.m1905.cn/mdb/uploadfile/2021/0420/thumb_1_283_390_20210420020822855068.jpg"]];
+        _thubImgView.contentMode = UIViewContentModeScaleAspectFill;
+        _thubImgView.layer.masksToBounds = YES;
 //        _thubImgView.layer.cornerRadius = K(5);
 //        _thubImgView.layer.masksToBounds = YES;
     }

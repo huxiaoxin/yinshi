@@ -9,6 +9,10 @@
 #import "UITextField+AddPlaceholder.h"
 @interface FilmLoactionJoinViewController ()
 @property(nonatomic,strong) UIButton * FilmJoninbtn;
+@property(nonatomic,strong) UITextField * FilmdInputTextfiled;
+@property(nonatomic,strong) UITextField * FilmdInputTextfiled1;
+@property(nonatomic,strong) UITextField * FilmdInputTextfiled2;
+@property(nonatomic,strong) UITextField * FilmdInputTextfiled3;
 @end
 
 @implementation FilmLoactionJoinViewController
@@ -45,35 +49,61 @@
     UILabel * FilmFirstlb=  [self LbconfigerWithTtile:@"真实姓名" lbFrame:CGRectMake(K(10), 0, K(100), K(40))];
     [FilmBtomView addSubview:FilmFirstlb];
     
-    UITextField * FilmdInputTextfiled= [self LbConfigtextFieldWithHoder:@"请输入真实姓名" FieldFrame:CGRectMake(CGRectGetMaxX(FilmFirstlb.frame), 0, SCREEN_Width-CGRectGetMaxX(FilmFirstlb.frame), K(40))];
+    UITextField * FilmdInputTextfiled = [self LbConfigtextFieldWithHoder:@"请输入真实姓名" FieldFrame:CGRectMake(CGRectGetMaxX(FilmFirstlb.frame), 0, SCREEN_Width-CGRectGetMaxX(FilmFirstlb.frame), K(40))];
     [FilmBtomView addSubview:FilmdInputTextfiled];
+    _FilmdInputTextfiled = FilmdInputTextfiled;
     
     UILabel * FilmSecondlb=  [self LbconfigerWithTtile:@"公司名称" lbFrame:CGRectMake(K(10), CGRectGetMaxY(FilmFirstlb.frame), K(100), K(40))];
     [FilmBtomView addSubview:FilmSecondlb];
     
-    UITextField * FilmdInputTextfiled1= [self LbConfigtextFieldWithHoder:@"请输入公司名称" FieldFrame:CGRectMake(CGRectGetMaxX(FilmFirstlb.frame), CGRectGetMaxY(FilmFirstlb.frame), SCREEN_Width-CGRectGetMaxX(FilmSecondlb.frame), K(40))];
+    UITextField * FilmdInputTextfiled1 = [self LbConfigtextFieldWithHoder:@"请输入公司名称" FieldFrame:CGRectMake(CGRectGetMaxX(FilmFirstlb.frame), CGRectGetMaxY(FilmFirstlb.frame), SCREEN_Width-CGRectGetMaxX(FilmSecondlb.frame), K(40))];
     [FilmBtomView addSubview:FilmdInputTextfiled1];
-
+    _FilmdInputTextfiled1 = FilmdInputTextfiled1;
+    
     
     UILabel * FilmThreedlb=  [self LbconfigerWithTtile:@"联系电话" lbFrame:CGRectMake(K(10), CGRectGetMaxY(FilmSecondlb.frame), K(100), K(40))];
     [FilmBtomView addSubview:FilmThreedlb];
     
     UITextField * FilmdInputTextfiled2 = [self LbConfigtextFieldWithHoder:@"请输入手机号" FieldFrame:CGRectMake(CGRectGetMaxX(FilmSecondlb.frame), CGRectGetMaxY(FilmSecondlb.frame), SCREEN_Width-CGRectGetMaxX(FilmThreedlb.frame), K(40))];
     [FilmBtomView addSubview:FilmdInputTextfiled2];
-
+    _FilmdInputTextfiled2 = FilmdInputTextfiled2;
+    
     
     UILabel * FilmFourelb=  [self LbconfigerWithTtile:@"备注" lbFrame:CGRectMake(K(10), CGRectGetMaxY(FilmThreedlb.frame), K(100), K(40))];
     [FilmBtomView addSubview:FilmFourelb];
     
     UITextField * FilmdInputTextfiled3 = [self LbConfigtextFieldWithHoder:@"如有特殊需求可填写在这儿" FieldFrame:CGRectMake(CGRectGetMaxX(FilmThreedlb.frame), CGRectGetMaxY(FilmThreedlb.frame), SCREEN_Width-CGRectGetMaxX(FilmFourelb.frame), K(40))];
     [FilmBtomView addSubview:FilmdInputTextfiled3];
-
+    _FilmdInputTextfiled3=  FilmdInputTextfiled3;
+    
 
     
     [self.view addSubview:self.FilmJoninbtn];
     // Do any additional setup after loading the view.
 }
 -(void)FilmJoninbtnClick{
+    if (_FilmdInputTextfiled.text.length == 0) {
+        [LCProgressHUD showInfoMsg:@"请填写真实姓名"];
+        return;
+    }
+    if (_FilmdInputTextfiled1.text.length == 0) {
+        [LCProgressHUD showInfoMsg:@"请填写公司名称"];
+        return;
+    }
+    if (_FilmdInputTextfiled2.text.length == 0) {
+        [LCProgressHUD showInfoMsg:@"请输入手机号"];
+        return;
+    }
+    
+    if (_FilmdInputTextfiled2.text.length != 11) {
+        [LCProgressHUD showInfoMsg:@"请输入正确的手机号"];
+        return;
+    }
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD showSuccess:@"提交成功,请注意手机短信"];
+        [self.navigationController popViewControllerAnimated:YES];
+    });
     
 }
 - (UIButton *)FilmJoninbtn{

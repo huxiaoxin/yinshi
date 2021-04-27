@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString * phone;
 @property(nonatomic,copy) NSArray  * imgArrs;
 @property(nonatomic,assign) NSInteger LoactionID;
+@property(nonatomic,assign) BOOL isBaoming;
 @end
 
 NS_ASSUME_NONNULL_END

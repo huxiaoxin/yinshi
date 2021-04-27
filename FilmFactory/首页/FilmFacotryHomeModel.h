@@ -30,6 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,copy) NSString * tagTwo;
 @property(nonatomic,copy) NSString * time;
 @property(nonatomic,assign) NSInteger Top_filmType;
+@property(nonatomic,assign) NSInteger total_Num;
 @end
 
 NS_ASSUME_NONNULL_END

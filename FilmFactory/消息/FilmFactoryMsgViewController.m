@@ -25,7 +25,12 @@
     self.gk_navTitle = @"消息";
     [self.view addSubview:self.FilmFacotryMsgTableView];
     _FilmFacotryMsgTableView.tableHeaderView = self.msgHeader;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(FilmFacotryLoginSucced) name:@"FilmFacotryLoginSucced" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(FilmFacotryLoginSucced) name:@"FilmFacotryLoginout" object:nil];
     // Do any additional setup after loading the view.
+}
+-(void)FilmFacotryLoginSucced{
+    [self FilmFacotryMsgTableViewClick];
 }
 - (NSMutableArray *)FilmMsgDataArr{
     if (!_FilmMsgDataArr) {
@@ -77,6 +82,11 @@
 }
 #pragma mark--FilmFactoryMsgHeaderViewDelegate
 -(void)FilmFactoryMsgHeaderViewBtnClickWithbtnIndex:(NSInteger)btnIndex{
+    if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        [self FilmFactoryBaseShowLoginVc];
+        return;
+    }
+
     if (btnIndex == 0) {
         FilmFactroysysTemViewController * filmsysVc = [[FilmFactroysysTemViewController alloc]init];
         filmsysVc.hidesBottomBarWhenPushed = YES;
@@ -98,13 +108,24 @@
     
     MJWeakSelf;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (weakSelf.FilmMsgDataArr.count > 0) {
-            [weakSelf.FilmMsgDataArr removeAllObjects];
+        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+            if (weakSelf.FilmMsgDataArr.count > 0) {
+                [weakSelf.FilmMsgDataArr removeAllObjects];
+            }
+            weakSelf.FilmMsgDataArr = FilmDataArr.mutableCopy;
+            [weakSelf.FilmFacotryMsgTableView reloadData];
+            [weakSelf.FilmFacotryMsgTableView.mj_header endRefreshing];
+
+        }else{
+            LYEmptyView * emtyView = [LYEmptyView emptyActionViewWithImage:nil titleStr:@"未登录" detailStr:@"" btnTitleStr:@"去登录" target:self action:@selector(FilmFactorytologin)];
+            weakSelf.FilmFacotryMsgTableView.ly_emptyView = emtyView;
+            [weakSelf.FilmFacotryMsgTableView.mj_header endRefreshing];
+
         }
-        weakSelf.FilmMsgDataArr = FilmDataArr.mutableCopy;
-        [weakSelf.FilmFacotryMsgTableView reloadData];
-        [weakSelf.FilmFacotryMsgTableView.mj_header endRefreshing];
     });
+}
+-(void)FilmFactorytologin{
+    [self FilmFactoryBaseShowLoginVc];
 }
 /*
 #pragma mark - Navigation
