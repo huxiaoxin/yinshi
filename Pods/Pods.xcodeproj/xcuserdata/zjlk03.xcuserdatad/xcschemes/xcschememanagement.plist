@@ -74,17 +74,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>QMUIKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>QRCodeUIKit-QRCodeUIKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>QRCodeUIKit.xcscheme</key>
+		<key>QRCodeReaderViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -129,16 +119,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>TTTAttributedLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Toast.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>WHC_ModelSqliteKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -160,11 +140,6 @@
 			<false/>
 		</dict>
 		<key>ZWPlaceHolder.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ZXingObjC.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

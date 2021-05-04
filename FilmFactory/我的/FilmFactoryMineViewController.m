@@ -14,8 +14,11 @@
 #import "FilmFactoryMySendViewController.h"
 #import "FilmMyYuyueViewController.h"
 #import "FilmMyColltecdViewController.h"
-#import <QuickQRCodeScanController.h>
-@interface FilmFactoryMineViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacroryMineHeaderViewDelegate>
+#import "QRCodeReaderViewController.h"
+@interface FilmFactoryMineViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacroryMineHeaderViewDelegate,QRCodeReaderDelegate>
+{
+    QRCodeReaderViewController * _reader;
+}
 @property(nonatomic,strong) UITableView * FilmFacroryTableView;
 @property(nonatomic,strong) FilmFacroryMineHeaderView * FilmFacoryHeader;
 @property(nonatomic,strong) NSMutableArray * FilmDataArr;
@@ -121,9 +124,20 @@
     }else if (indexPath.row == 3){
         
     }else if (indexPath.row == 4){
-           QuickQRCodeScanController *scanVC = [QuickQRCodeScanController new];
-        scanVC.hidesBottomBarWhenPushed =  YES;
-            [self.navigationController pushViewController:scanVC animated:YES];
+        NSArray *types = @[AVMetadataObjectTypeQRCode];
+              _reader        = [QRCodeReaderViewController readerWithMetadataObjectTypes:types];
+          
+              // Using delegate methods
+              _reader.delegate = self;
+          
+              // Or by using blocks
+              [_reader setCompletionWithBlock:^(NSString *resultAsString) {
+                [self dismissViewControllerAnimated:YES completion:^{
+                      NSLog(@"%@", resultAsString);
+                }];
+              }];
+          
+              [self presentViewController:_reader animated:YES completion:NULL];
     }else{
         if ([FilmFactoryToolModel FilmFactoryisLogin]) {
             [LCProgressHUD showLoading:@""];
@@ -214,6 +228,19 @@
         FilmMyColltecdVc.hidesBottomBarWhenPushed =YES;
         [self.navigationController pushViewController:FilmMyColltecdVc animated:YES];
     }
+}
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+      [self dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"%@", result);
+      }];
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+      [self dismissViewControllerAnimated:YES completion:NULL];
 }
 /*
 #pragma mark - Navigation

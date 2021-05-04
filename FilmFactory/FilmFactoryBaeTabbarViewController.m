@@ -21,8 +21,6 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
     NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"fangxiangnomal",@"wodenomal"];
     NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"fangxiangsel",@"wodesel"];
     NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"首映",@"我的"];
