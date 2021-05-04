@@ -11,6 +11,7 @@
 @interface FilmFactroysysTemViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property(nonatomic,strong) UITableView * FilmFactorySysTableView;
 @property(nonatomic,strong) NSMutableArray * FilmFactroyDataArr;
+@property(nonatomic,assign) BOOL isLast;
 @end
 
 @implementation FilmFactroysysTemViewController
@@ -18,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.gk_navTitle = @"系统消息";
+    self.isLast = NO;
     self.view.backgroundColor = LGDLightGaryColor;
     [self.view addSubview:self.FilmFactorySysTableView];
     // Do any additional setup after loading the view.
@@ -28,6 +30,14 @@
     }
     return _FilmFactroyDataArr;
 }
+-(void)FilmFactorySysTableViewClick{
+    MJWeakSelf;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        weakSelf.isLast = YES;
+        [weakSelf.FilmFactorySysTableView reloadData];
+        [weakSelf.FilmFactorySysTableView.mj_header endRefreshing];
+    });
+}
 -(UITableView *)FilmFactorySysTableView{
     if (!_FilmFactorySysTableView) {
         _FilmFactorySysTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NaviH, SCREEN_Width, SCREEN_Height-NaviH-GK_SAFEAREA_BTM) style:UITableViewStylePlain];
@@ -37,11 +47,13 @@
         _FilmFactorySysTableView.showsHorizontalScrollIndicator = NO;
         _FilmFactorySysTableView.separatorStyle = UITableViewCellSelectionStyleNone;
         _FilmFactorySysTableView.backgroundColor = [UIColor clearColor];
+        _FilmFactorySysTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(FilmFactorySysTableViewClick)];
+        [_FilmFactorySysTableView.mj_header beginRefreshing];
     }
     return _FilmFactorySysTableView;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
+    return self.isLast ? 1 : 0;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString * FilmFacotoryIdentifer = @"FilmFactroysystemTableViewCell";

@@ -21,6 +21,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
     NSArray * XiaoxinPaper_nomalArr = @[@"M_shouyenomal",@"dongtainomal",@"xiaoxinomal",@"fangxiangnomal",@"wodenomal"];
     NSArray * XiaoxinPaper_selArr = @[@"M_shouyesel",@"dongtaisel",@"xiaoxisel",@"fangxiangsel",@"wodesel"];
     NSArray  * FilmFactoryTitleArr = @[@"首页",@"动态",@"消息",@"首映",@"我的"];
@@ -41,10 +43,11 @@
     Xiaoxinpaper_Config.titleColor = [UIColor blackColor];
     Xiaoxinpaper_Config.titleFont = [UIFont boldSystemFontOfSize:18];
     Xiaoxinpaper_Config.gk_navItemLeftSpace = K(15);
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor], NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:LGDMianColor, NSFontAttributeName:[UIFont systemFontOfSize:11.0f]} forState:UIControlStateSelected];
+  
     self.viewControllers = _XiaoxinPaperGlbalClassArr;
     self.tabBar.barTintColor = [UIColor whiteColor];
+    //这里的self是UITabBarController，代码根据各自的TabBar定义而定
+    self.tabBar.tintColor = LGDMianColor;
     self.tabBar.translucent =NO;
 }
 

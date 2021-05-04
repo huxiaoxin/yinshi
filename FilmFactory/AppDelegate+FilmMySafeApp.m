@@ -62,11 +62,27 @@
         [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic4.zhimg.com/v2-f46b8aa0f6bc647241570968b41f86f9_l.jpg?source=1940ef5c" FilmName:@"磕学家脆脆冰" mytime:@"04-22 10:25:31" MyFilmID:6 MyComentID:12 CellHeight:0 myContent:@"这部电影故事内核极其NB，电影想象力拉满，还引入了关于精神分析、心理学、讲了一个关于【梦中取物】的奇幻故事："]];
 
 
-//超级的我
     
     
+       [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic4.zhimg.com/v2-26467f46da7fd386d52b9a01dea0fc3b_l.jpg?source=1940ef5c" FilmName:@"大狸" mytime:@"04-20 12:11:36" MyFilmID:7 MyComentID:13 CellHeight:0 myContent:@"自《大圣归来》之后观众对孙悟空，哪吒等神话人物IP的审美疲劳已经到了一个即将爆发的点，但是其实《西游记之再世妖王》是继《大圣归来》之后，这五年里第二部以西游主题，孙悟空为主角的登上大荧幕的动画电影，也就是说，这些年动画电影并没有太多用西游IP来讲故事的，其他真人电影与网剧倒是有不少用了西游IP，所以才给观众留下了此IP出现如此频繁的印象。"]];
+
+        [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic2.zhimg.com/v2-08ae149e7b1126dabd16efeb04ed3e10_l.jpg?source=1940ef5c" FilmName:@"杨建东" mytime:@"04-20 16:21:18" MyFilmID:7 MyComentID:14 CellHeight:0 myContent:@"前面孙悟空大闹五庄观的部分，因为前面太过遵守原著，反倒显得孙悟空有点蛮不讲理，作为一部商业电影，我觉得改编不够巧妙"]];
+    
+    
+    [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic1.zhimg.com/v2-72c70b3d202f6508138766ab6ad4a080_l.jpg?source=1940ef5c" FilmName:@"泰勒太垃" mytime:@"04-21 15:17:21" MyFilmID:8 MyComentID:15 CellHeight:0 myContent:@"一艘被当时誉为“世上最豪华”的邮轮，泰坦尼克号，于1912年4月10日从英国南安普顿出发驶往美国纽约。所有人都说它“永不沉没”，然而它却永远的沉入在北大西洋冰冷的深海里，1517具亡灵随之而去..."]];
 
     
+        [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic1.zhimg.com/v2-642b591aa4c9d5d00ef8f77bb856bfeb_l.jpg?source=1940ef5c" FilmName:@"导演罗飞" mytime:@"04-21 17:36:19" MyFilmID:8 MyComentID:16 CellHeight:0 myContent:@"Almost six years ago, my friend Steven Schwankert came to me and suggested that we make a documentary about the Chinese survivors of Titanic. “There were Chinese people on Titanic?!” was my immediate reaction. It’s a sentence I’ve heard a lot in the years since, pretty much every time we have told people about the film we are working on. And it is the fact that no one seemed to know about the Chinese on board the most famous shipwreck of all time that spurred us on to finish what at times seemed like an impossible task."]];
+
+        [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic4.zhimg.com/v2-5d2d11b356a351dbeabedb44e19744c1_l.jpg?source=1940ef5c" FilmName:@"河东" mytime:@"04-21 18:14:21" MyFilmID:9 MyComentID:17 CellHeight:0 myContent:@"故事围绕冰雪世界里一场精彩的雪橇比赛展开，意外的失败发掘出了赛事背后的黑幕，弄虚作假、偷奸耍滑注定遭人唾弃，团结友爱、齐心协作才是正道。影片没有刻意说教，在诙谐幽默的气氛中让人不知不觉接受为人处世的正确态度，孩子的三观教育需要从小培养，建议家长带着小孩子一起来观看。充满正能量的片子还是太少了，这一部弥足珍贵！"]];
+    
+        [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic1.zhimg.com/v2-be6706884851de64f5f1c795018ebb88_l.jpg?source=1940ef5c" FilmName:@"舒心酱" mytime:@"04-24 12:56:21" MyFilmID:13 MyComentID:18 CellHeight:0 myContent:@"空王冠”之后，多米尼克·库克导演和本尼迪克特·康伯巴奇又合作了一部《信使》，不同于此前莎翁作品改编的理查三世、亨利六世等遥远故事，《信使》聚焦的是上个世纪中期的一场危机。"]];
+    
+        [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"https://pic2.zhimg.com/v2-f84f12436f2a8d8999c5757e5c07e210_l.jpg?source=1940ef5c" FilmName:@"Atlantis" mytime:@"04-21 15:21:56" MyFilmID:15 MyComentID:19 CellHeight:0 myContent:@"影片不是在讨论技术问题，而是创造这样情形来探讨人性问题，如果只能用个体的生命来保全群体的安危，那也许我们唯一能接受的就是这种在一同努力后最终不得已的个人牺牲，且必须是个体心甘情愿的付出，这是人性的最低底线，而群体中有没有甘愿牺牲的人，则就是这个群体的命运所在了。"]];
+
+
+    
+//
 //    [tempArr addObject:[self FilmFactoryShangyinModelConfigWithImgUrl:@"" FilmName:@"" mytime:@"" MyFilmID:0 MyComentID:0 CellHeight:0 myContent:@""]];
     BOOL filmComentStatus = [[NSUserDefaults standardUserDefaults] boolForKey:@"FilmCpmentAdd"];
     if (filmComentStatus == NO) {
@@ -398,7 +414,7 @@
     
     FilmFacotryHomeModel * FilmModel12 = [[FilmFacotryHomeModel alloc]init];
     FilmModel12.total_Num = 3;
-    FilmModel12.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0312/thumb_1_283_390_20210312014243270403.jpg";
+    FilmModel12.imgTubUrl = @"https://image11.m1905.cn/mdb/uploadfile/2021/0108/thumb_1_283_390_20210108012525840951.jpg";
     FilmModel12.famous = @"椿之庭";
     FilmModel12.englishNae  =@"椿の庭";
     FilmModel12.filmtype = @"剧情";

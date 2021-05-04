@@ -68,8 +68,8 @@
 //
         
         NSTextAttachment * attchment = [[NSTextAttachment alloc]init];
-        attchment.image = [UIImage imageNamed:@"meishi_chengzi"];
-        attchment.bounds  = CGRectMake(0, -5, K(25), K(25));
+        attchment.image = [UIImage imageNamed:@"logo"];
+        attchment.bounds  = CGRectMake(0, -3, K(25), K(25));
         
         NSAttributedString * attbute =[NSAttributedString attributedStringWithAttachment:attchment];
         NSMutableAttributedString * mutablAtt = [[NSMutableAttributedString alloc]initWithString:@"企鹅追剧"];

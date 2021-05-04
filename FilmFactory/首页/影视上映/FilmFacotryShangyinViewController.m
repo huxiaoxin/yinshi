@@ -9,7 +9,7 @@
 #import "FilmFacotryShangyinTableViewCell.h"
 #import "FilmFacotryShangyingDetailViewController.h"
 #import "FilmFacotryHomeModel.h"
-@interface FilmFacotryShangyinViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface FilmFacotryShangyinViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacotryShangyinTableViewCellDelegate>
 @property(nonatomic,strong) UITableView * FilmFacotryTableView;
 @property(nonatomic,strong) NSMutableArray * FilmFacotryDataArr;
 @end
@@ -58,6 +58,8 @@
     if (FilmmFacoreyCell == nil ) {
         FilmmFacoreyCell = [[FilmFacotryShangyinTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:FilmFacotryIdentifer];
     }
+    FilmmFacoreyCell.tag = indexPath.row;
+    FilmmFacoreyCell.delegate = self;
     FilmmFacoreyCell.filmHomeModel = self.FilmFacotryDataArr[indexPath.row];
     return FilmmFacoreyCell;
 }
@@ -81,6 +83,14 @@
         [weakSelf.FilmFacotryTableView reloadData];
         [weakSelf.FilmFacotryTableView.mj_header endRefreshing];
     });
+}
+#pragma mark--FilmFacotryShangyinTableViewCellDelegate
+-(void)FilmFacotryShangyinTableViewCellWithbtnClick:(NSInteger)cellTag{
+    
+    FilmFacotryShangyingDetailViewController * FilmShanyinVc = [[FilmFacotryShangyingDetailViewController alloc]init];
+    FilmShanyinVc.hidesBottomBarWhenPushed = YES;
+    FilmShanyinVc.filmHomeMode = self.FilmFacotryDataArr[cellTag];
+    [self.navigationController pushViewController:FilmShanyinVc animated:YES];
 }
 /*
 #pragma mark - Navigation

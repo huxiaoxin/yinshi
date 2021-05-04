@@ -15,6 +15,7 @@
 @implementation FilmFactoryMovieView
 -(instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
+//        self.backgroundColor = LGDGaryColor;
         [self addSubview:self.Topnamelb];
         [self addSubview:self.Btomlb];
         [self addSubview:self.thubImgView];

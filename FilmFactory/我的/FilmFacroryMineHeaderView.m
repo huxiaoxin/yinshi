@@ -40,7 +40,7 @@
 - (UIImageView *)FilmFacoryImgView{
     if (!_FilmFacoryImgView) {
         _FilmFacoryImgView = [[UIImageView alloc]initWithFrame:CGRectMake((15), (60), K(50), K(50))];
-        _FilmFacoryImgView.backgroundColor = LGDMianColor;
+//        _FilmFacoryImgView.backgroundColor = LGDMianColor;
         _FilmFacoryImgView.layer.borderColor = [UIColor whiteColor].CGColor;
         _FilmFacoryImgView.layer.borderWidth = K(2);
         _FilmFacoryImgView.layer.cornerRadius = K(25);

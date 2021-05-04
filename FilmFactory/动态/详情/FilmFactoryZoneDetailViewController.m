@@ -11,6 +11,7 @@
 #import "FilmFarZoneDetiaCell.h"
 #import "FilmZoneJbaoController.h"
 #import <LYEmptyView-umbrella.h>
+#import <XHInputView/XHInputView.h>
 @interface FilmFactoryZoneDetailViewController ()<UITableViewDataSource,UITableViewDelegate,FilmFarZoneDetiaCellDelegate,FilmFacorryZoneDetailheaderDelegate>
 @property(nonatomic,strong) UITableView  * FilmFactroyTableView;
 @property(nonatomic,strong) FilmFacorryZoneDetailheader * FilmDetailHeader;
@@ -123,7 +124,7 @@
     }
 }
 -(void)ShuyunComentWituser:(FilmFactoryComentModel *)comentModel{
-    [WHC_ModelSqlite delete:[FilmFactoryComentModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld' and ComentID = '%ld'",comentModel.ZoneID,comentModel.ComentID]];
+    [WHC_ModelSqlite delete:[FilmFactoryComentModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld' and ComentID = '%ld'",(long)comentModel.ZoneID,comentModel.ComentID]];
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD showSuccess:@"屏蔽成功"];
@@ -143,7 +144,7 @@
 }
 -(void)ShuyunDetailheaderClicks{
     MJWeakSelf;
-    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactoryComentModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld'",self.filmModel.ZoneDetrailID]];
+    NSArray * dataArr = [WHC_ModelSqlite query:[FilmFactoryComentModel class] where:[NSString stringWithFormat:@"ZoneID = '%ld'",(long)self.filmModel.ZoneDetrailID]];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (weakSelf.FilmDataArr.count > 0) {
             [weakSelf.FilmDataArr removeAllObjects];
@@ -189,7 +190,7 @@
     [LCProgressHUD showLoading:@""];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LCProgressHUD  showSuccess:@"屏蔽成功"];
-        [WHC_ModelSqlite delete:[FilmFactoryZoneModel class] where:[NSString stringWithFormat:@"ZoneDetrailID ='%ld'",self.filmModel.ZoneDetrailID]];
+        [WHC_ModelSqlite delete:[FilmFactoryZoneModel class] where:[NSString stringWithFormat:@"ZoneDetrailID ='%ld'",(long)self.filmModel.ZoneDetrailID]];
         [self.navigationController popViewControllerAnimated:YES];
     });
 }
@@ -198,7 +199,45 @@
         [self FilmFactoryBaseShowLoginVc];
         return;
     }
+    MJWeakSelf;
+    [XHInputView showWithStyle:InputViewStyleLarge configurationBlock:^(XHInputView *inputView) {
+        inputView.sendButtonBackgroundColor =  LGDMianColor;
+        inputView.sendButtonTitle = @"发送";
+    } sendBlock:^BOOL(NSString *text) {
+        if (text.length == 0) {
+            [LCProgressHUD showInfoMsg:@"请输入评论"];
+            return NO;
+        }else{
+            [weakSelf WindwoundSendComentWith:text];
+            return YES;
+        }
+    }];
+    
 
+}
+-(NSString*)getCurrentTimes{
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    NSDate *datenow = [NSDate date];
+    NSString *currentTimeString = [formatter stringFromDate:datenow];
+    return currentTimeString;
+}
+-(void)WindwoundSendComentWith:(NSString *)Text{
+    [LCProgressHUD showLoading:@""];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [LCProgressHUD showSuccess:@"评论成功"];
+        FilmFactoryComentModel * windwoundItem  =[[FilmFactoryComentModel alloc]init];
+        windwoundItem.imgurl = @"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201509%2F20%2F20150920105348_38Ewf.jpeg&refer=http%3A%2F%2Fb-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1622122578&t=b958e581d60c7e075d8725af3bbd6127";
+        windwoundItem.name = [FilmFactoryToolModel FilmGetuserName];
+        windwoundItem.time = [self getCurrentTimes];
+        windwoundItem.content  = Text;
+        windwoundItem.ZoneID = self.filmModel.ZoneDetrailID;
+        windwoundItem.ComentID = (self.FilmDataArr.count+1);
+        windwoundItem.CellHeight = 0;
+        [WHC_ModelSqlite  insert:windwoundItem];
+        [self.FilmDataArr addObject:windwoundItem];
+        [self.FilmFactroyTableView reloadData];
+    });
 }
 /*
 #pragma mark - Navigation

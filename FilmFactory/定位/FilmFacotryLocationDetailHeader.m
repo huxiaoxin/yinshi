@@ -29,7 +29,7 @@
         [self addSubview:self.FilmLine];
         
         _FilmFactroyThubImgView.imageURLStringsGroup =  filmModel.imgArrs;
-        _FilmStatuslb.text = filmModel.isStart ? @"活动进行中" : @"活动已结束";
+        _FilmStatuslb.text = filmModel.isStart ?   @"活动已结束": @"活动进行中";
         _FilmColltecdBtn.selected = filmModel.isCollted;
         _FilmToplb.text =  filmModel.title;
         CGRect ToptitleRect  =[filmModel.title cxl_sizeWithMoreString:[UIFont systemFontOfSize:15] maxWidth:SCREEN_Width-K(30)];

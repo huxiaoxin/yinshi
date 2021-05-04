@@ -102,6 +102,17 @@
     _Filmzoneline.mj_y = CGRectGetMaxY(_FilmZonecontentlb.frame)+K(20);
     comentModel.CellHeight = CGRectGetMaxY(_Filmzoneline.frame);
 }
+- (void)setFilmShangyinModel:(FilmFactoryShangyinModel *)filmShangyinModel{
+    _filmShangyinModel = filmShangyinModel;
+    [_FilmZoneuserImgIcon sd_setImageWithURL:[NSURL URLWithString:filmShangyinModel.imgurl]];
+    _FilmeZonenamelb.text = filmShangyinModel.name;
+    _FilmZonetimelb.text =  filmShangyinModel.time;
+    _FilmZonecontentlb.text =  filmShangyinModel.content;
+    _FilmZonecontentlb.ksize = [filmShangyinModel.content cxl_sizeWithMoreString:KSysFont(15) maxWidth:SCREEN_Width-K(31)].size;
+    
+    _Filmzoneline.mj_y = CGRectGetMaxY(_FilmZonecontentlb.frame)+K(20);
+    filmShangyinModel.CellHeight = CGRectGetMaxY(_Filmzoneline.frame);
+}
 -(void)FilmzonebBtnClick{
     
 }

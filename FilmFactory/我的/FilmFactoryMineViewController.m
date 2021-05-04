@@ -14,6 +14,7 @@
 #import "FilmFactoryMySendViewController.h"
 #import "FilmMyYuyueViewController.h"
 #import "FilmMyColltecdViewController.h"
+#import <QuickQRCodeScanController.h>
 @interface FilmFactoryMineViewController ()<UITableViewDelegate,UITableViewDataSource,FilmFacroryMineHeaderViewDelegate>
 @property(nonatomic,strong) UITableView * FilmFacroryTableView;
 @property(nonatomic,strong) FilmFacroryMineHeaderView * FilmFacoryHeader;
@@ -24,7 +25,7 @@
 
 - (NSMutableArray *)FilmDataArr{
     if (!_FilmDataArr) {
-        _FilmDataArr = @[@"意见反馈",@"清除缓存",@"关于我们",@"当前版本",@"退出登录"].mutableCopy;
+        _FilmDataArr = @[@"意见反馈",@"清除缓存",@"关于我们",@"当前版本",@"扫一扫",@"退出登录"].mutableCopy;
     }
     return _FilmDataArr;
 }
@@ -119,8 +120,12 @@
         [self.navigationController pushViewController:FilmFactorVc animated:YES];
     }else if (indexPath.row == 3){
         
+    }else if (indexPath.row == 4){
+           QuickQRCodeScanController *scanVC = [QuickQRCodeScanController new];
+        scanVC.hidesBottomBarWhenPushed =  YES;
+            [self.navigationController pushViewController:scanVC animated:YES];
     }else{
-        if (![FilmFactoryToolModel FilmFactoryisLogin]) {
+        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
             [LCProgressHUD showLoading:@""];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [FilmFactoryToolModel XiaoxinpaperToolModelWithLoginout];
@@ -143,7 +148,7 @@
     }
 }
 -(void)FilmeuserNotLogin{
-    self.FilmFacoryHeader.FilmFacoryImgView.image = [UIImage imageNamed:@""];
+    self.FilmFacoryHeader.FilmFacoryImgView.image = [UIImage imageNamed:@"logo"];
     self.FilmFacoryHeader.FilmToplb.text  =@"未登录";
     self.FilmFacoryHeader.FilmBtomlb.text = @"";
 }

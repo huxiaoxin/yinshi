@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _FilmFacotrtNums = 60;
+    self.view.backgroundColor = [UIColor whiteColor];
     self.gk_navBarAlpha = 0;
     UIButton *  FilmFacotrCealrBtn  = [UIButton buttonWithType:UIButtonTypeCustom];
     [FilmFacotrCealrBtn setTitle:@"跳过" forState:UIControlStateNormal];
@@ -31,7 +32,7 @@
     UIImageView * LogoImgView = [[UIImageView alloc]initWithFrame:CGRectMake(RealWidth(20), NaviH+RealWidth(30), RealWidth(36), RealWidth(36))];
     LogoImgView.layer.cornerRadius = RealWidth(18);
     LogoImgView.layer.masksToBounds = YES;
-    [LogoImgView setBackgroundColor:LGDMianColor];
+//    [LogoImgView setBackgroundColor:LGDMianColor];
     LogoImgView.image = [UIImage imageNamed:@"logo"];
     [self.view addSubview:LogoImgView];
     

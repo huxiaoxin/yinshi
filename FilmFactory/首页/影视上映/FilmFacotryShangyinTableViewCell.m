@@ -64,6 +64,7 @@
         FilmWatchBtn.layer.masksToBounds = YES;
         [FilmWatchBtn setBackgroundColor:[UIColor redColor]];
         [FilmWatchBtn setTitle:@"我想看" forState:UIControlStateNormal];
+        [FilmWatchBtn addTarget:self action:@selector(FilmWatchBtnClick) forControlEvents:UIControlEventTouchUpInside];
         [self.contentView addSubview:FilmWatchBtn];
 
     }
@@ -76,5 +77,8 @@
     _FilmCenterlb.text =  filmHomeModel.articlList;
     _FilmstarView.currentStar = filmHomeModel.total_Num;
 
+}
+-(void)FilmWatchBtnClick{
+    [self.delegate FilmFacotryShangyinTableViewCellWithbtnClick:self.tag];
 }
 @end

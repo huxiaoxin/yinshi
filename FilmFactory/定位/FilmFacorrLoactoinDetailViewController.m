@@ -96,6 +96,23 @@
         _FilmJoninbtn.titleLabel.textAlignment = NSTextAlignmentCenter;
         _FilmJoninbtn.titleLabel.font = [UIFont systemFontOfSize:K(15)];
         [_FilmJoninbtn addTarget:self action:@selector(FilmJoninbtnClick) forControlEvents:UIControlEventTouchUpInside];
+        if ([FilmFactoryToolModel FilmFactoryisLogin]) {
+            if (self.filmLoactionModel.isBaoming) {
+                [_FilmJoninbtn setBackgroundColor:LGDGaryColor];
+                [_FilmJoninbtn setTitle:@"已参与" forState:UIControlStateNormal];
+
+                _FilmJoninbtn.enabled = NO;
+            }else{
+                _FilmJoninbtn.enabled = YES;
+                [_FilmJoninbtn setBackgroundColor:LGDMianColor];
+                [_FilmJoninbtn setTitle:@"立即参与" forState:UIControlStateNormal];
+            }
+        }else{
+            _FilmJoninbtn.enabled = YES;
+            [_FilmJoninbtn setBackgroundColor:LGDMianColor];
+            [_FilmJoninbtn setTitle:@"立即参与" forState:UIControlStateNormal];
+        }
+      
     }
     return _FilmJoninbtn;
 }
